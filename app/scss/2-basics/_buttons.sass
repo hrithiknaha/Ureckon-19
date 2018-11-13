@@ -1,0 +1,18 @@
+.button, 
+button, 
+input[type="submit"], 
+input[type="reset"],
+input[type="button"]
+    @include buttonify
+
+.button1
+    @include buttonify
+    padding: 12px 30px
+    color: $primary_violet
+    font-size: 16px
+    letter-spacing: 0.1rem
+    box-shadow: 0 5px 15px transparentize($primary_violet, 0.3)
+    &:hover,
+    &:active,
+    &:focus
+        box-shadow: 0 2px 15px -5px transparentize($primary_violet, 0.3)
