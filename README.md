@@ -5,31 +5,35 @@
   - Sass
 
 #### Things to do after cloning the repo
+ 1. Create a new branch and work in this branch
 
- run `npm install`
+ 2.  run `npm install`
 
  Intalls the dev dependencies
 
- run `gulp`
+ 3. run `gulp`
 
-Running these two commands will install the dev dependencies mentioned in package.json. It will also launch the site with a localhost.
-
+Running these two commands will install the dev dependencies mentioned in package.json. It will also launch the site with a localhost. 
 
 *Note: Both the commands might take several minutes to execute.*
 
+4. Now edit and save the browser will refresh it self automatically.
+
 #### Things to do after making changes
 
-  run `gulp clean`
+  5. run `gulp clean`
 
   It will clean the dist folder, including the image cache. 
   
   To only delete the dist contents and keep the images run `clean:dist`
 
-  run `gulp build`
+  6. run `gulp build`
 
   This will rebuild the `dist` folder.
+  
+  7. Add, commit and push changes of your branch to git
 
-  - Add, commit and push changes to git
+  *Note: Do not merge your branch with the master as conflicts might arise. Instead create a pull request(Hint; Create pull request from the github repository page)*
 
 
 ## Flexbox grid
