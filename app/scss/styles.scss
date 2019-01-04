@@ -3,6 +3,7 @@
 //1 - TOOLS
 @import "1-tools/normalize";
 @import "1-tools/grid";
+@import "1-tools/global";
 @import "1-tools/variables";
 @import "1-tools/mixins";
 
@@ -20,3 +21,4 @@
 //4 - PAGES
 
 @import "4-pages/home";
+@import "4-pages/signup";
