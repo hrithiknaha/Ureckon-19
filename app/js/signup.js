@@ -142,12 +142,18 @@ $('.next-button.repeat-password').click(
   }
 );
 
-$('.next-button').hover(
+$('.animated-button').hover(
   function(){
     $(this).css('cursor', 'pointer');
   }
 );
 
+var value=0;
+$('.next-button').click(
+  function(){
+    value=value+12.5;
+    $('.bar').css('width',value+'%');
+});
 
 
 

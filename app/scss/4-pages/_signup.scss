@@ -13,6 +13,10 @@ body {
 }
 
 .registration-form {
+
+  @include atSmall{
+    width: 300px;
+  }
   width: 400px;
   position: absolute;
   left: 50%;
@@ -169,6 +173,7 @@ body {
   margin-top: -$input-height;
   
   p {
+    margin-top: 1rem;
     color: white;
     font-weight: 900;
     letter-spacing: 2px;
@@ -179,10 +184,17 @@ body {
 }
 .progress{
     border-radius: .5rem;
+    text-align: center;
     position: relative;
-    top: 330px;
-    left: 513px;
+    top: 19.68rem;
+    left: 32.06rem;
     width: 25%;
+
+    @include atSmall{
+      top:19.25rem;
+      left: 6.25rem;
+      width: 50%;
+    }
 }
 
 .bar{
