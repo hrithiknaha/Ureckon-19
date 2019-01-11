@@ -1,5 +1,10 @@
 # Ureckon 2019 Website
 
+### Tasks
+  - Priority 1
+
+------------------------------------------------------
+
 ### Technologies used:
   - Gulp
   - Sass
