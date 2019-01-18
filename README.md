@@ -6,14 +6,14 @@
 ------------------------------------------------------
 
 ### Comments 
-  -#1801A
-    --Added Events registratino page Title and Backdrop
-    --Added Tilt.js
-    --Minor Card Changes
+  - #1801A
+    * Added Events registratino page Title and Backdrop
+    * Added Tilt.js
+    * Minor Card Changes
   
-  -#1801B
-    --Changed Readme.md
-    --Added Comments
+  - #1801B
+    * Changed Readme.md
+    * Added Comments
 
 ### Technologies used:
   - Gulp
