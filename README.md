@@ -15,6 +15,10 @@
     * Changed Readme.md
     * Added Comments
 
+  - #2101A
+    * Events.html has been completed
+    * Responsive
+
 ### Technologies used:
   - Gulp
   - Sass

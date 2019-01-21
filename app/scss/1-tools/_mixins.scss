@@ -5,4 +5,16 @@
 		@content;
 	}
 }
+
+@mixin atMedium{
+		@media (max-width: 1366px) and (min-width:531){
+		@content;
+	}
+}
+
+@mixin atLarge{
+		@media (max-width: 1920px) and (min-width: 1367px){
+		@content;
+	}
+}
     

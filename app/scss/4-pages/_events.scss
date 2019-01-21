@@ -1,4 +1,4 @@
-
+//First Instance ----------------------------------------------
 .background{
     &__image{
         background: #ee0979;  /* fallback for old browsers */
@@ -9,91 +9,549 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        @include atLarge{
+
+        }
+        @include atSmall{
+
+        }
     }
 }
 
 .hero{
-    // position: absolute;
-    // left:50%;
-    // top:50%;
-    // transform:translateX(-50%) translateY(-50%);
     z-index: 1;
     text-align: center;
-    padding-top: 30vh;
+    padding-top: 20vh;
     width: 80%;
     margin: auto;
     color: rgb(255, 255, 255);
+    
+    @include atLarge{
+        padding-top: 30vh;
+    }
+
+    @include atSmall{
+        padding-top: 15vh;
+    }
+
     &__title{
         text-align: center;
         letter-spacing: 0.1em;
         font-size: 3.3rem;
         font-weight: 300;
+
+        @include atLarge{
+            font-size: 4.5rem;
+        }
+    
+        @include atSmall{
+            font-size: 1.9rem;
+            letter-spacing:0.1rem;
+        }
     }
     &__subtitle{
         text-align: center; 
         letter-spacing: 0.5rem;
         width: 50%;
         margin: auto;
+
+        @include atLarge{
+            letter-spacing: 0.5rem;
+        }
+    
+        @include atSmall{
+            letter-spacing:0.115rem;
+            width: 100%;
+        }
     }
     &__arrow{
         left: 50%;
         margin-top: 1rem;
         color: #fff;
     }
+    &__events{
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        font-size: 1.7rem;
+        padding-top: 2.8rem;
+        width: 50%;
+        margin: auto;
+
+        @include atLarge{
+            
+        }
+    
+        @include atSmall{
+            grid-template-columns: repeat(7,1fr);
+            margin: auto;
+            width: 100%;
+            grid-gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        > a{
+            color: rgb(255, 255, 255);
+            position: relative;
+            & .tooltiptext{
+                visibility: hidden;
+                background-color: transparent;
+                color: #fff;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                position: absolute;
+                z-index: 1;
+                width: 120px;
+                top: 100%;
+                left: 50%; 
+                margin-left: -60px;
+                font-size: 1rem;
+                letter-spacing: 0.1em;
+                font-family: 'Raleway', sans-serif;
+
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    font-size: 0.5rem;
+                    width: 60px;
+                    left: 135%;
+                }
+            }
+            &:hover{
+                color: white !important;
+                padding-bottom: 0.5rem;
+                border-bottom: 0.11rem solid white;
+                transition: all 0.2s ease-in-out 0s;
+                & .tooltiptext{
+                    visibility: visible;
+                }
+            }
+            
+        }
+        
+    }
 }
 
 
+//Robotics Page ----------------------------------------------
 .events-page{
     margin-top: 25%;
     &__robotics{
         &-title{
             margin-bottom: 1.5rem;
             font-size: 2.5rem;
+
+            @include atLarge{
+                padding-top: 16rem;
+            }
+        
+            @include atSmall{
+                margin-top: 9rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
         }
         &-cards{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: 100%; 
+            }
+
             &-image{
                 width: 100%;
                 height: 15vw;
                 object-fit: cover;
+
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 40vh;
+                }
+
+            }
+        }
+        &-badge{
+            font-family: 'Raleway', sans-serif;
+            transition: .3s;
+            overflow: hidden;
+            font-weight: 300 !important;
+            &:focus{
+                outline: 0;
+            }
+            &:hover{
+                background: #ee0979;
+                cursor: pointer;
+            
+            }
+        }
+    }
+    &__coding{
+        &-title{
+            margin-top: 7rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: 100%; 
+            }
+
+            &-image{
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 40vh;
+                }
+
+            }
+        }
+        &-badge{
+            font-family: 'Raleway', sans-serif;
+            transition: .3s;
+            overflow: hidden;
+            font-weight: 300 !important;
+            &:focus{
+                outline: 0;
+            }
+            &:hover{
+                background: #ff6a00;
+                cursor: pointer;
+      
+            }
+        }
+    }
+    &__gaming{
+        &-title{
+            margin-top: 7rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: 100%; 
+            }
+
+            &-image{
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 40vh;
+                }
+            }
+        }
+        &-badge{
+            font-family: 'Raleway', sans-serif;
+            transition: .3s;
+            overflow: hidden;
+            font-weight: 300 !important;
+            &:focus{
+              outline: 0;
+            }
+            &:hover{
+              background: #9b59b6;
+              cursor: pointer;
+              
+            }
+        }
+    }
+    &__mechanics{
+        &-title{
+            margin-top: 7rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: 100%; 
+            }
+
+            &-image{
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 40vh;
+                }
+            }
+        }
+        &-badge{
+            font-family: 'Raleway', sans-serif;
+            transition: .3s;
+            overflow: hidden;
+            font-weight: 300 !important;
+            &:focus{
+              outline: 0;
+            }
+            &:hover{
+              background: #2ecc71;
+              cursor: pointer;
+              
+            }
+        }
+    }
+    &__flagship{
+        &-title{
+            margin-top: 7rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: 100%; 
+            }
+
+            &-image{
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 40vh;
+                }
+            }
+        }
+        &-badge{
+            font-family: 'Raleway', sans-serif;
+            transition: .3s;
+            overflow: hidden;
+            font-weight: 300 !important;
+            &:focus{
+              outline: 0;
+            }
+            &:hover{
+              background: #2c3e50;
+              cursor: pointer;
+              
+            }
+        }
+    }
+    &__business{
+        &-title{
+            margin-top: 7rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: 100%; 
+            }
+
+            &-image{
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 40vh;
+                }
+            }
+        }
+        &-badge{
+            font-family: 'Raleway', sans-serif;
+            transition: .3s;
+            overflow: hidden;
+            font-weight: 300 !important;
+            &:focus{
+              outline: 0;
+            }
+            &:hover{
+              background: #f1c40f;
+              cursor: pointer;
+              
+            }
+        }
+    }
+    &__miscellaneous{
+        &-title{
+            margin-top: 7rem;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                margin-top: 2rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: 100%; 
+            }
+
+            &-image{
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 40vh;
+                }
+            }
+        }
+        &-badge{
+            font-family: 'Raleway', sans-serif;
+            transition: .3s;
+            overflow: hidden;
+            font-weight: 300 !important;
+            &:focus{
+              outline: 0;
+            }
+            &:hover{
+              background: #bdc3c7;
+              cursor: pointer;
+              
             }
         }
     }
 }
 
-.card-title{
-    &__badge:after{
-        content: "";
-        position: absolute;
-        top: -110%;
-        left: -210%;
-        width: 200%;
-        height: 200%;
-        opacity: 0;
-        transform: rotate(30deg);
-        background: rgba(255, 255, 255, 0.13);
-        background: linear-gradient(
-            to right, 
-            rgba(255, 255, 255, 0.13) 0%,
-            rgba(255, 255, 255, 0.13) 77%,
-            rgba(255, 255, 255, 0.5) 92%,
-            rgba(255, 255, 255, 0.0) 100%
-        );   
-    }
-
-    &__badge:hover:after{
-        opacity: 1;
-        top: -30%;
-        left: -30%;
-        transition-property: left, top, opacity;
-        transition-duration: 0.7s, 0.7s, 0.15s;
-        transition-timing-function: ease;
-    }
-
-    &__badge:active:after{
-        opacity: 0;
-    }
+.line-break{
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to left, #f0f0f0, #8c8b8b, #f0f0f0);
+    margin-top: 6rem;
 }
-
