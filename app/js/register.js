@@ -101,17 +101,22 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
             $(".container-contact100").css('visibility', 'visible');
         }
         
-    });
+    }); 
+    
 
-    // TODO: Add on click listeners to all buttons
+})(jQuery);
 
-    $('#robowar').on('click', function () {
-        if (!isSignedUp) {
-            notSignedUp();
-            return;
-        }    
+// TODO: Add on click listeners to all buttons
 
-        output = `<div class="wrap-contact100">
+$('#robowar').on('click', function () {
+    if (!isSignedUp) {
+        notSignedUp();
+        return;
+    }
+    console.log('test');
+    
+
+    output = `<div class="wrap-contact100">
             <button class="btn-hide-contact100" onclick="document.getElementById('output').style.display='none'">
                 <i class="zmdi zmdi-close"></i>
             </button>
@@ -121,7 +126,7 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
             </div>
     
             <form class="contact100-form validate-form">
-                <div class="wrap-input100 validate-input">
+                <div class="wrap-input100 validate-input" >
                     <input id="name" class="input100" type="text" name="name" placeholder="Team name">
                     <span class="focus-input100"></span>
                     <label class="label-input100" for="name">
@@ -130,16 +135,16 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
                 </div>
     
     
-                <div class="wrap-input100 validate-input">
-                    <input id="email" class="input100" type="text" name="email" placeholder="Enter Email (Eg. example@email.com)">
+                <div class="wrap-input100 validate-input" id="the-basics">
+                    <input id="email" class="input100 typeahead" type="text" name="email" placeholder="Enter Email (Eg. example@email.com)">
                     <span class="focus-input100"></span>
                     <label class="label-input100" for="email">
                         <span class="lnr lnr-envelope m-b-5"></span>
                     </label>
                 </div>
 
-                <div class="wrap-input100 validate-input">
-                    <input id="email" class="input100" type="text" name="email" placeholder="Enter Email (Eg. example@email.com)">
+                <div class="wrap-input100 validate-input" id="the-basics">
+                    <input id="email" class="input100 typeahead" type="text" name="email" placeholder="Enter Email (Eg. example@email.com)">
                     <span class="focus-input100"></span>
                     <label class="label-input100" for="email">
                         <span class="lnr lnr-envelope m-b-5"></span>
@@ -154,10 +159,8 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
             </form>
         </div>`;
 
-        $("#output").html(output);
-    });
-
-})(jQuery);
+    $("#output").html(output);
+});
 
 function notSignedUp() {
     output = `<div class="wrap-contact100 notSigned">
@@ -209,4 +212,5 @@ $('#the-basics .typeahead').typeahead({
     {
         name: 'states',
         source: substringMatcher(members)
-    });
+    }
+);
