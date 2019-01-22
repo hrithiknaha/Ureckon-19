@@ -1,4 +1,4 @@
-var isSignedUp = false;
+var isSignedUp = true;
 var output;
 
 (function ($) {
