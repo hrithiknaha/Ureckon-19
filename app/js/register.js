@@ -1,4 +1,4 @@
-var isSignedUp = true;
+var isSignedUp = false;
 var output;
 
 (function ($) {
@@ -80,16 +80,19 @@ var output;
     [ Show / hide contact ]*/
     $('.btn-hide-contact100').on('click', function () {       
         $(".container-contact100").fadeOut(300);
+        $(".container-contact100").css('visibility', 'hidden');
     });
 
     $('.btn-show-contact100').on('click', function () {
         if (isSignedUp) {
             $(".container-contact100").css("top", "0.1%");
             $('.container-contact100').fadeIn(300);
+            $(".container-contact100").css("visibility", "visible");
         } else {
             notSignedUp();
             $(".container-contact100").css("top", "0.1%");
             $(".container-contact100").fadeIn(300);
+            $(".container-contact100").css('visibility', 'visible');
         }
         
     });
@@ -151,7 +154,7 @@ var output;
 })(jQuery);
 
 function notSignedUp() {
-    output = `<div class="wrap-contact100" style="height:220px">
+    output = `<div class="wrap-contact100 notSigned">
                 <button class="btn-hide-contact100 mt-2" onclick="document.getElementById('output').style.display='none'">
                 <i class="zmdi zmdi-close"></i>
                 </button>
