@@ -25,6 +25,9 @@
   - #2301C
     * Team Page
 
+  - #2301D
+    * Added oval avatars and Hover effect.
+
 ### Technologies used:
   - Gulp
   - Sass

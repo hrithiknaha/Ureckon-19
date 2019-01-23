@@ -241,6 +241,25 @@
                 }
 
             }
+            &-body{
+                text-align: center;
+                &-name{
+                   font-size: 1.5rem; 
+                   padding-top: 0.5rem;
+                }
+                &-title{
+                    font-size: 1.1rem;
+                }
+            }
+            &-social{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0.215rem;
+                display: none;
+                & a{
+                    color: #02AAB0 !important;
+                }
+            }
         }
         &-badge{
             font-family: 'Raleway', sans-serif;
@@ -334,4 +353,12 @@
 
 .card__teams{
     border: none !important;
+        &:hover {
+        .teams-page__core-member-cards-social{
+            display: block;
+        }  
+        .teams-page__core-member-cards-body-title{
+            display: none;
+        }
+    }
 }
