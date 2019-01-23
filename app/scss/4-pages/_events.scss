@@ -144,7 +144,7 @@
             font-size: 2.5rem;
 
             @include atLarge{
-                padding-top: 16rem;
+                margin-top: 30rem;
             }
         
             @include atSmall{
@@ -204,11 +204,11 @@
             font-size: 2.5rem;
             
             @include atLarge{
-                
+                margin-top: 30rem; 
             }
         
             @include atSmall{
-                margin-top: 2rem;
+                margin-top: 9rem;
                 text-align: center;
                 font-size: 2.5rem !important;
             }
@@ -264,11 +264,11 @@
             font-size: 2.5rem;
 
             @include atLarge{
-                
+                margin-top: 30rem; 
             }
         
             @include atSmall{
-                margin-top: 2rem;
+                margin-top: 9rem;
                 text-align: center;
                 font-size: 2.5rem !important;
             }
@@ -322,11 +322,11 @@
             font-size: 2.5rem;
 
             @include atLarge{
-                
+                margin-top: 30rem;
             }
         
             @include atSmall{
-                margin-top: 2rem;
+                margin-top: 9rem;
                 text-align: center;
                 font-size: 2.5rem !important;
             }
@@ -380,11 +380,11 @@
             font-size: 2.5rem;
 
             @include atLarge{
-                
+                margin-top: 30rem;
             }
         
             @include atSmall{
-                margin-top: 2rem;
+                margin-top: 9rem;
                 text-align: center;
                 font-size: 2.5rem !important;
             }
@@ -438,11 +438,11 @@
             font-size: 2.5rem;
 
             @include atLarge{
-                
+                margin-top: 30rem;
             }
         
             @include atSmall{
-                margin-top: 2rem;
+                margin-top: 9rem;
                 text-align: center;
                 font-size: 2.5rem !important;
             }
@@ -496,11 +496,11 @@
             font-size: 2.5rem;
 
             @include atLarge{
-                
+                margin-top: 30rem;
             }
         
             @include atSmall{
-                margin-top: 2rem;
+                margin-top: 9rem;
                 text-align: center;
                 font-size: 2.5rem !important;
             }
