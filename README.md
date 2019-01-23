@@ -1,10 +1,5 @@
 # Ureckon 2019 Website
 
-### Tasks
-  - Priority 1
-
-------------------------------------------------------
-
 ### Comments 
   - #1801A
     * Added Events registratino page Title and Backdrop
@@ -26,6 +21,9 @@
     * Responsiveness 
     * Workshop Page
     * Talks Page
+
+  - #2301C
+    * Team Page
 
 ### Technologies used:
   - Gulp
