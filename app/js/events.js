@@ -11,13 +11,6 @@ $('.js-tilt').tilt({
 })
 
 $(document).ready(function() {
-    // $(".events-page__robotics").hide();
-    // $(".events-page__coding").hide();
-    // $(".events-page__gaming").hide();
-    // $(".events-page__mechanics").hide();
-    // $(".events-page__flagship").hide();
-    // $(".events-page__business").hide();
-    // $(".events-page__miscellaneous").hide();
     $(".events-page").hide();
 });
 
