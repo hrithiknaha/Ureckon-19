@@ -109,6 +109,14 @@ textarea:-moz-placeholder { color: #adadad;}
 textarea::-moz-placeholder { color: #adadad;}
 textarea:-ms-input-placeholder { color: #adadad;}
 
+.events-page {
+    margin-top: 0% !important;
+}
+
+.background__image {
+  height: 110% !important;
+}
+
 label {
   display: block;
   margin: 0;
@@ -546,7 +554,9 @@ textarea.input100 {
   top: 0px;
   right: -25px;
 }
-
+.members {
+  width: 100%;
+}
 .twitter-typeahead {
   width: 100%;
 }
@@ -584,8 +594,9 @@ textarea.input100 {
     right: 10px;
   }
 }
-.notSigned {
+#notSigned {
   height: 220px;
+  display: none;
 }
 
 
@@ -610,7 +621,22 @@ textarea.input100 {
 }
 
 @media screen and (max-width: 410px) {
-  .notSigned {
+  #notSigned {
     height: 250px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .container {
+    margin-top: 14rem;
+  }
+  .background__image {
+    height: 100% !important;
+  }
+}
+
+@media screen and (max-width: 540px) and (min-width: 435px) {
+  .container {
+    margin-top: 20rem;
   }
 }

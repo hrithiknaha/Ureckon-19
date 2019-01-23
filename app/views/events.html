@@ -24,7 +24,7 @@
      
     <link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
      
-    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="../css/util.css">
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -420,8 +420,8 @@
     </div>
 
     <div class="container-contact100" id="output">
-        <div class="wrap-contact100">
-            <button class="btn-hide-contact100" onclick="document.getElementById('output').style.display = 'none';">
+        <div class="wrap-contact100" id="signed">
+            <button class="btn-hide-contact100">
                 <i class="zmdi zmdi-close"></i>
             </button>
     
@@ -429,30 +429,79 @@
                 <span>Register</span>
             </div>
     
-            <form class="contact100-form validate-form">
+            <form class="contact100-form validate-form" method="POST" id="registrationform">
                 <div class="wrap-input100 validate-input">
-                    <input id="name" class="input100" type="text" name="name" placeholder="Team name" >
+                    <input id="name" class="input100" type="text" name="name" placeholder="Team Name" >
                     <span class="focus-input100"></span>
                     <label class="label-input100" for="name">
-                        <span class="lnr lnr-user m-b-2"></span>
+                        <span class="fa fa-users"></span>
                     </label>
                 </div>
     
-    
-                <div class="wrap-input100 validate-input" id="the-basics">
-                    <input id="email" class="input100 typeahead" type="text" name="email" placeholder="Enter Email (Eg. example@email.com)">
-                    <span class="focus-input100"></span>
-                    <label class="label-input100" for="email">
-                        <span class="lnr lnr-envelope m-b-5"></span>
-                    </label>
+                <div id="member1" class="members">
+                    <div class="wrap-input100 validate-input" id="the-basics">
+                        <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member 1 Username ">
+                        <span class="focus-input100"></span>
+                        <label class="label-input100" for="email">
+                            <span class="fa fa-user"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="member2" class="members">
+                    <div class="wrap-input100 validate-input" id="the-basics">
+                        <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member 2 Username ">
+                        <span class="focus-input100"></span>
+                        <label class="label-input100" for="email">
+                            <span class="fa fa-user"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="member3" class="members">
+                    <div class="wrap-input100 validate-input" id="the-basics">
+                        <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member  3 Username ">
+                        <span class="focus-input100"></span>
+                        <label class="label-input100" for="email">
+                            <span class="fa fa-user"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="member4" class="members">
+                    <div class="wrap-input100 validate-input" id="the-basics">
+                        <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member  4 Username ">
+                        <span class="focus-input100"></span>
+                        <label class="label-input100" for="email">
+                            <span class="fa fa-user"></span>
+                        </label>
+                    </div>
+                </div>
+                <div id="member5" class="members">
+                    <div class="wrap-input100 validate-input" id="the-basics">
+                        <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member 5 Username ">
+                        <span class="focus-input100"></span>
+                        <label class="label-input100" for="email">
+                            <span class="fa fa-user"></span>
+                        </label>
+                    </div>
                 </div>
     
                 <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
-                        Submit
-                    </button>
+                    <input type="submit" class="contact100-form-btn" value="Submit">
                 </div>
             </form>
+        </div>
+
+        <div class="wrap-contact100" id="notSigned">
+            <button class="btn-hide-contact100 mt-2" >
+                <i class="zmdi zmdi-close"></i>
+            </button>
+            <div class="contact100-form-title" style="background: #eeeeee">
+                <span style="text-align:center;">It seems like you are not signed up. Sign Up here:</span>
+            </div>
+            <div class="container-contact100-form-btn">
+                <a href="./signup.html"><button class="contact100-form-btn">
+                        Sign Up
+                    </button></a>
+            </div>
         </div>
     </div>
            

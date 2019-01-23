@@ -1,17 +1,21 @@
 var output;
 
-// FOR BACKEND DEVELOPER:
+// ****** BACKEND DEVELOPER CONFIGURATION STARTS: *******
 
-var members = ["a@gmail.com", "b@gmail.com", "c@gmail.com", "d@gmail.com"]; // FETCH EMAILS FROM DATABASE AND ADD TO THIS ARRAY
+var members = ["Sayan", "Somsubhra", "Raja", "Baja", "Khaja"]; // FETCH USERNAMES FROM DATABASE AND ADD TO THIS ARRAY
 
 var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
 
+// ********* BACKEND DEVELOPER CONFIGURATION ENDS: *********
+
+document.getElementById('registrationform').addEventListener('submit', submitted);
 
 (function ($) {
     "use strict";
 
     /*==================================================================
     [ Validate after type ]*/
+    
     $('.validate-input .input100').each(function(){
         $(this).on('blur', function(){
             if(validate(this) == false){
@@ -81,12 +85,11 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
         $(thisAlert).find('.btn-hide-validate').remove();
     }
     
-
+    
     /*==================================================================
     [ Show / hide contact ]*/
     $('.btn-hide-contact100').on('click', function () {       
         $(".container-contact100").fadeOut(300);
-        $(".container-contact100").css('visibility', 'hidden');
     });
 
     $('.btn-show-contact100').on('click', function () {
@@ -94,6 +97,7 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
             $(".container-contact100").css("top", "0.1%");
             $('.container-contact100').fadeIn(300);
             $(".container-contact100").css("visibility", "visible");
+            
         } else {
             notSignedUp();
             $(".container-contact100").css("top", "0.1%");
@@ -101,82 +105,54 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
             $(".container-contact100").css('visibility', 'visible');
         }
         
-    }); 
-    
+    });    
 
 })(jQuery);
 
 // TODO: Add on click listeners to all buttons
+
+$("#roborace").on("click", function() {
+    if (!isSignedUp) {
+        notSignedUp();
+        return;
+    }
+    $(".contact100-form-title span").text('Register For RoboRace');
+    
+    $("#member1").css("display", "block");
+    $("#member2").css("display", "block");
+    $("#member3").css("display", "none");
+    $("#member4").css("display", "none");
+    $("#member5").css("display", "none");
+    $("#member1 #email").prop('required', true);
+    $("#member2 #email").prop('required', true);
+    $("#member3 #email").prop('required', false);
+    $("#member4 #email").prop('required', false);
+    $("#member5 #email").prop('required', false);
+});
 
 $('#robowar').on('click', function () {
     if (!isSignedUp) {
         notSignedUp();
         return;
     }
-    console.log('test');
-    
-
-    output = `<div class="wrap-contact100">
-            <button class="btn-hide-contact100" onclick="document.getElementById('output').style.display='none'">
-                <i class="zmdi zmdi-close"></i>
-            </button>
-    
-            <div class="contact100-form-title" style="background: #eeeeee">
-                <span>Register</span>
-            </div>
-    
-            <form class="contact100-form validate-form">
-                <div class="wrap-input100 validate-input" >
-                    <input id="name" class="input100" type="text" name="name" placeholder="Team name">
-                    <span class="focus-input100"></span>
-                    <label class="label-input100" for="name">
-                        <span class="lnr lnr-user m-b-2"></span>
-                    </label>
-                </div>
-    
-    
-                <div class="wrap-input100 validate-input" id="the-basics">
-                    <input id="email" class="input100 typeahead" type="text" name="email" placeholder="Enter Email (Eg. example@email.com)">
-                    <span class="focus-input100"></span>
-                    <label class="label-input100" for="email">
-                        <span class="lnr lnr-envelope m-b-5"></span>
-                    </label>
-                </div>
-
-                <div class="wrap-input100 validate-input" id="the-basics">
-                    <input id="email" class="input100 typeahead" type="text" name="email" placeholder="Enter Email (Eg. example@email.com)">
-                    <span class="focus-input100"></span>
-                    <label class="label-input100" for="email">
-                        <span class="lnr lnr-envelope m-b-5"></span>
-                    </label>
-                </div>
-    
-                <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
-                        Submit
-                    </button>
-                </div>
-            </form>
-        </div>`;
-
-    $("#output").html(output);
+    $(".contact100-form-title span").text("Register For RoboWar");
+    $('#member1').css('display', 'block');
+    $('#member2').css('display', 'block');
+    $('#member3').css('display', 'block');
+    $('#member4').css('display', 'none');
+    $('#member5').css('display', 'none');
+    $("#member1 #email").prop("required", true);
+    $("#member2 #email").prop("required", true);
+    $("#member3 #email").prop("required", true);
+    $("#member4 #email").prop("required", false);
+    $("#member5 #email").prop("required", false);
 });
 
+// not signed up
+
 function notSignedUp() {
-    output = `<div class="wrap-contact100 notSigned">
-                <button class="btn-hide-contact100 mt-2" onclick="document.getElementById('output').style.display='none'">
-                <i class="zmdi zmdi-close"></i>
-                </button>
-                 <div class="contact100-form-title" style="background: #eeeeee">
-                <span style="text-align:center;">It seems like you are not signed up. Sign Up here:</span>
-                </div>
-                <div class="container-contact100-form-btn">
-                    <a href="./signup.html"><button class="contact100-form-btn">
-                        Sign Up
-                    </button></a>
-                </div>            
-            </div>`;
-    $("#output").html(output);
+    $("#signed").css('display', 'none');
+    $("#notSigned").css('display', 'block');
 }
 
 // typeahead:
@@ -205,7 +181,7 @@ var substringMatcher = function (strs) {
 
 
 $('#the-basics .typeahead').typeahead({
-    hint: true,
+    hint: false,
     highlight: true,
     minLength: 1
 },
@@ -214,3 +190,9 @@ $('#the-basics .typeahead').typeahead({
         source: substringMatcher(members)
     }
 );
+
+function submitted(event) {
+    event.preventDefault();
+    console.log('submitted');
+    
+}
