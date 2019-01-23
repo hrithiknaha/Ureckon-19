@@ -19,6 +19,9 @@
     * Events.html has been completed
     * Responsive
 
+  - #2301A
+    * On click show for Sections added
+
 ### Technologies used:
   - Gulp
   - Sass
