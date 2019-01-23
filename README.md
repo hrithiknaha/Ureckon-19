@@ -22,6 +22,9 @@
   - #2301A
     * On click show for Sections added
 
+  -#2301B
+    * Responsiveness 
+
 ### Technologies used:
   - Gulp
   - Sass
