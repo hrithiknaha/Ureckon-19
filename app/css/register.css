@@ -122,6 +122,12 @@ label {
   margin: 0;
 }
 
+/*  { */
+  .contact100-form {
+
+  height: 400px;
+  overflow: auto
+}
 /*---------------------------------------------*/
 button {
 	outline: none !important;
