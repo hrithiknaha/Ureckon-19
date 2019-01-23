@@ -168,7 +168,7 @@
 
             &-image{
                 width: 100%;
-                height: 15vw;
+                height: 25vw;
                 object-fit: cover;
 
                 @include atLarge{
@@ -325,4 +325,13 @@
     height: 1px; 
     background-image: linear-gradient(to left, #f0f0f0, #8c8b8b, #f0f0f0);
     margin-top: 6rem;
+}
+
+
+.rounded__images{
+    border-radius: 25rem !important;
+}
+
+.card__teams{
+    border: none !important;
 }
