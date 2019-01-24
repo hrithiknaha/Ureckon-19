@@ -109,18 +109,18 @@
                                 </button>
                             </div>
                     </div>
-                    <div class="card">
+                    <!-- <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
                             <div class="card-body">
                                 <h4 class="card-title">Robo Sumo<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                
                                 <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="robosumo">
                                     Register
                                 </button>
                             </div>
-                    </div>
+                    </div> -->
 
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
@@ -147,6 +147,21 @@
                             </button>
                         </div>
                 </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
+                    <div class="card-body">
+                        <h4 class="card-title">Robo Rumble<div class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div>
+                        </h4>
+                        <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
+                        <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                        <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="roborumble">
+                            Register
+                        </button>
+                    </div>
+                </div>
+                
                 </div> 
                 <hr class="line-break">
             </section>
@@ -185,11 +200,11 @@
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__coding-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Web Design<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
+                                <h4 class="card-title">Spyder<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
                                 <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
-                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="webddesign">
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="spyder">
                                     Register
                                 </button>
                             </div>
@@ -198,7 +213,7 @@
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__coding-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Debugging<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
+                                <h4 class="card-title">Debug<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
                                 <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
@@ -454,7 +469,7 @@
                         </label>
                     </div>                
                 </div>
-                <div id="member2" class="members">
+                <div id="member2" class="members" style="display: none">
                     <div class="wrap-input100 validate-input" id="the-basics">
                         <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member 2 Username ">
                         <span class="focus-input100"></span>
@@ -463,7 +478,7 @@
                         </label>
                     </div>
                 </div>
-                <div id="member3" class="members">
+                <div id="member3" class="members" style="display: none">
                     <div class="wrap-input100 validate-input" id="the-basics">
                         <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member  3 Username ">
                         <span class="focus-input100"></span>
@@ -472,7 +487,7 @@
                         </label>
                     </div>
                 </div>
-                <div id="member4" class="members">
+                <div id="member4" class="members" style="display: none">
                     <div class="wrap-input100 validate-input" id="the-basics">
                         <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member  4 Username ">
                         <span class="focus-input100"></span>
@@ -481,7 +496,7 @@
                         </label>
                     </div>
                 </div>
-                <div id="member5" class="members">
+                <div id="member5" class="members" style="display: none">
                     <div class="wrap-input100 validate-input" id="the-basics">
                         <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member 5 Username ">
                         <span class="focus-input100"></span>
@@ -490,7 +505,9 @@
                         </label>
                     </div>
                 </div>
- 
+                <button id="addmember" class="btn btn-success btn-sm" type="button">+</button>
+                <button id="delmember" class="btn btn-danger btn-sm" type="button">-</button>
+    
                 <div class="container-contact100-form-btn">
                     <input type="submit" class="contact100-form-btn" value="Submit">
                 </div>

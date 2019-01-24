@@ -122,7 +122,6 @@ label {
   margin: 0;
 }
 
-
 /*  { */
   .contact100-form {
 
@@ -409,6 +408,14 @@ textarea.input100 {
   color: #846add;
 }
 
+#addmember, #delmember {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* justify-content: center; */
+}
 
 
 /*------------------------------------------------------------------

@@ -187,7 +187,7 @@ th {
 /* Secondary colours RGB */
 /* Lighter colours Rgb*/
 * {
-  font-family: 'Assistant', sans-serif !important; }
+  font-family: 'Assistant', sans-serif; }
 
 canvas {
   display: block; }

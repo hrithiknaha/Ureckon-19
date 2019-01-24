@@ -8,6 +8,26 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
 
 // ********* BACKEND DEVELOPER CONFIGURATION ENDS: *********
 
+var events = {
+    // roborace: 5,
+    // robowar: 3,
+    robosoccer: 5,
+    roborumble: 5,
+    bridgemaking: 3,
+    getsetsell: 4,
+    admaking: 4,
+    spyder: 2,
+    codegolf: 2,
+    coderanch: 2,
+    pubg: 4,
+    cluex: 2,
+    uic: 5,
+};
+
+var idName = "";
+
+var count = 1;
+
 document.getElementById('registrationform').addEventListener('submit', submitted);
 
 (function ($) {
@@ -90,6 +110,8 @@ document.getElementById('registrationform').addEventListener('submit', submitted
     [ Show / hide contact ]*/
     $('.btn-hide-contact100').on('click', function () {       
         $(".container-contact100").fadeOut(300);
+        count = 1;
+        idName = "";
     });
 
     $('.btn-show-contact100').on('click', function () {
@@ -111,23 +133,50 @@ document.getElementById('registrationform').addEventListener('submit', submitted
 
 // TODO: Add on click listeners to all buttons
 
+//robotics
+
 $("#roborace").on("click", function() {
     if (!isSignedUp) {
         notSignedUp();
         return;
     }
     $(".contact100-form-title span").text('Register For RoboRace');
-    
-    $("#member1").css("display", "block");
-    $("#member2").css("display", "block");
-    $("#member3").css("display", "none");
-    $("#member4").css("display", "none");
-    $("#member5").css("display", "none");
-    $("#member1 #email").prop('required', true);
-    $("#member2 #email").prop('required', true);
-    $("#member3 #email").prop('required', false);
-    $("#member4 #email").prop('required', false);
-    $("#member5 #email").prop('required', false);
+
+    $('#addmember').on('click', function () { 
+        if (count <= events.roborace) {
+            count++;
+            idName = "member" + count;
+            document.getElementById(idName).style.display = "block";
+        } 
+        if (count >= 1 && count <= event.roborace) {
+            document.getElementById("addmember").disabled = false;
+            document.getElementById("delmember").disabled = false;
+        }
+        if (count === events.roborace) {
+            document.getElementById('addmember').disabled = true;
+            document.getElementById('delmember').disabled = false;
+        }
+        // console.log(count);
+        
+        
+    })
+    $('#delmember').on('click', function () {
+        if (count >= 1) {
+            idName = "member" + count;
+            document.getElementById(idName).style.display = "none";
+            count--;
+        }
+        if (count >= 1 && count <= event.roborace) {
+          document.getElementById("addmember").disabled = false;
+          document.getElementById("delmember").disabled = false;
+        }
+        if (count === 1) {
+            document.getElementById("addmember").disabled = false;            
+            document.getElementById("delmember").disabled = true;            
+        }
+        // console.log(count);
+        
+    })
 });
 
 $('#robowar').on('click', function () {
@@ -136,17 +185,461 @@ $('#robowar').on('click', function () {
         return;
     }
     $(".contact100-form-title span").text("Register For RoboWar");
-    $('#member1').css('display', 'block');
-    $('#member2').css('display', 'block');
-    $('#member3').css('display', 'block');
-    $('#member4').css('display', 'none');
-    $('#member5').css('display', 'none');
-    $("#member1 #email").prop("required", true);
-    $("#member2 #email").prop("required", true);
-    $("#member3 #email").prop("required", true);
-    $("#member4 #email").prop("required", false);
-    $("#member5 #email").prop("required", false);
+
+    $('#addmember').on('click', function () {
+        if (count <= events.robowar) {
+            count++;
+            idName = "member" + count;
+            document.getElementById(idName).style.display = "block";
+        }
+        if (count >= 1 && count <= event.robowar) {
+            document.getElementById("addmember").disabled = false;
+            document.getElementById("delmember").disabled = false;
+        }
+        if (count === events.robowar) {
+            document.getElementById('addmember').disabled = true;
+            document.getElementById('delmember').disabled = false;
+        }
+        // console.log(count);
+
+
+    })
+    $('#delmember').on('click', function () {
+        if (count >= 1) {
+            idName = "member" + count;
+            document.getElementById(idName).style.display = "none";
+            count--;
+        }
+        if (count >= 1 && count <= event.robowar) {
+            document.getElementById("addmember").disabled = false;
+            document.getElementById("delmember").disabled = false;
+        }
+        if (count === 1) {
+            document.getElementById("addmember").disabled = false;
+            document.getElementById("delmember").disabled = true;
+        }
+        // console.log(count);
+
+    })
 });
+
+$("#robosoccer").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Robo Soccer");
+    $("#addmember").on("click", function() {
+      if (count <= events.robosoccer) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.robosoccer) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.robosoccer) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.robosoccer) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+//coding:
+$("#coderanch").on("click", function () {
+    if (!isSignedUp) {
+        notSignedUp();
+        return;
+    }
+    $(".contact100-form-title span").text('Register For Code Ranch');
+
+    $("#addmember").on("click", function() {
+      if (count <= events.coderanch) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.coderanch) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.coderanch) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.coderanch) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+$("#codegolf").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Code Golf");
+
+    $("#addmember").on("click", function() {
+      if (count <= events.codegolf) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.codegolf) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.codegolf) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.codegolf) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+$("#spyder").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+    $(".contact100-form-title span").text("Register For Spyder");
+    
+    $("#addmember").on("click", function() {
+      if (count <= events.spyder) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.spyder) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.spyder) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function () {
+        if (count >= 1) {
+            idName = "member" + count;
+            document.getElementById(idName).style.display = "none";
+            count--;
+        }
+        if (count >= 1 && count <= event.spyder) {
+            document.getElementById("addmember").disabled = false;
+            document.getElementById("delmember").disabled = false;
+        }
+        if (count === 1) {
+            document.getElementById("addmember").disabled = false;
+            document.getElementById("delmember").disabled = true;
+        }
+        // console.log(count);
+    });
+});
+
+// Gaming:
+
+$("#pubg").on("click", function () {
+    if (!isSignedUp) {
+        notSignedUp();
+        return;
+    }
+    $(".contact100-form-title span").text("Register For PUBG");
+
+    $("#addmember").on("click", function() {
+      if (count <= events.pubg) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.pubg) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.pubg) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.pubg) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+// mechanical:
+$("#bridgemaking").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Bridge Making");
+
+    $("#addmember").on("click", function() {
+      if (count <= events.bridgemaking) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.bridgemaking) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.bridgemaking) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.bridgemaking) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+// Flagship:
+$("#uic").on("click", function () {
+    if (!isSignedUp) {
+        notSignedUp();
+        return;
+    }
+    $(".contact100-form-title span").text("Register For UIC");
+
+    $("#addmember").on("click", function() {
+      if (count <= events.uic) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.uic) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.uic) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.uic) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+// business:
+
+$("#getsetsell").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Get Set Sell");
+
+    $("#addmember").on("click", function() {
+      if (count <= events.getsetsell) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.getsetsell) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.getsetsell) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.getsetsell) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+$("#admaking").on("click", function () {
+    if (!isSignedUp) {
+        notSignedUp();
+        return;
+    }
+    $(".contact100-form-title span").text("Register For Ad making");
+
+    $("#addmember").on("click", function() {
+      if (count <= events.admaking) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.admaking) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.admaking) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.admaking) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+// misc:
+$("#cluex").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For ClueX");
+
+    $("#addmember").on("click", function() {
+      if (count <= events.cluex) {
+        count++;
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "block";
+      }
+      if (count >= 1 && count <= event.cluex) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.cluex) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+    $("#delmember").on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        document.getElementById(idName).style.display = "none";
+        count--;
+      }
+      if (count >= 1 && count <= event.cluex) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
 
 // not signed up
 
