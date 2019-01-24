@@ -1,10 +1,5 @@
 # Ureckon 2019 Website
 
-### Tasks
-  - Priority 1
-
-------------------------------------------------------
-
 ### Comments 
   - #1801A
     * Added Events registratino page Title and Backdrop
@@ -19,6 +14,24 @@
     * Events.html has been completed
     * Responsive
 
+  - #2301A
+    * On click show for Sections added
+
+  - #2301B
+    * Responsiveness 
+    * Workshop Page
+    * Talks Page
+
+  - #2301C
+    * Team Page
+
+  - #2301D
+    * Added oval avatars and Hover effect.
+
+  - #2401A
+    * Teams page minor changes
+    * Home page particle and parallax
+    
 ### Technologies used:
   - Gulp
   - Sass
