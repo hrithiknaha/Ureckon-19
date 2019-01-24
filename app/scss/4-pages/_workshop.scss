@@ -1,0 +1,206 @@
+//First Instance ----------------------------------------------
+.background{
+    &__image-workshops{
+        background: #EB3349;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        @include atLarge{
+
+        }
+        @include atSmall{
+
+        }
+    }
+}
+
+.hero{
+    z-index: 1;
+    text-align: center;
+    padding-top: 30vh;
+    width: 80%;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    
+    @include atLarge{
+        padding-top: 30vh;
+    }
+
+    @include atSmall{
+        padding-top: 15vh;
+    }
+
+    &__title{
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-size: 3.3rem;
+        font-weight: 300;
+
+        @include atLarge{
+            font-size: 4.5rem;
+        }
+    
+        @include atSmall{
+            font-size: 1.9rem;
+            letter-spacing:0.1rem;
+        }
+    }
+    &__subtitle{
+        text-align: center; 
+        letter-spacing: 0.5rem;
+        width: 50%;
+        margin: auto;
+
+        @include atLarge{
+            letter-spacing: 0.5rem;
+        }
+    
+        @include atSmall{
+            letter-spacing:0.115rem;
+            width: 100%;
+        }
+    }
+    &__arrow{
+        left: 50%;
+        margin-top: 1rem;
+        color: #fff;
+    }
+    // &__workshops{
+    //     display: grid;
+    //     grid-template-columns: repeat(7,1fr);
+    //     font-size: 1.7rem;
+    //     padding-top: 2.8rem;
+    //     width: 50%;
+    //     margin: auto;
+
+    //     @include atLarge{
+            
+    //     }
+    
+    //     @include atSmall{
+    //         grid-template-columns: repeat(7,1fr);
+    //         margin: auto;
+    //         width: 100%;
+    //         grid-gap: 0.5rem;
+    //         font-size: 1rem;
+    //     }
+
+    //     > a{
+    //         color: rgb(255, 255, 255);
+    //         position: relative;
+    //         & .tooltiptext{
+    //             visibility: hidden;
+    //             background-color: transparent;
+    //             color: #fff;
+    //             text-align: center;
+    //             padding: 5px 0;
+    //             border-radius: 6px;
+    //             position: absolute;
+    //             z-index: 1;
+    //             width: 120px;
+    //             top: 100%;
+    //             left: 50%; 
+    //             margin-left: -60px;
+    //             font-size: 1rem;
+    //             letter-spacing: 0.1em;
+    //             font-family: 'Raleway', sans-serif;
+
+    //             @include atLarge{
+                
+    //             }
+            
+    //             @include atSmall{
+    //                 font-size: 0.5rem;
+    //                 width: 60px;
+    //                 left: 135%;
+    //             }
+    //         }
+    //         &:hover{
+    //             color: white !important;
+    //             padding-bottom: 0.5rem;
+    //             border-bottom: 0.11rem solid white;
+    //             transition: all 0.2s ease-in-out 0s;
+    //             & .tooltiptext{
+    //                 visibility: visible;
+    //             }
+    //         }
+            
+    //     }
+        
+    // }
+}
+
+
+//Workshops Page ----------------------------------------------
+.workshops-page{
+    margin-top: 25%;
+    &__content{
+        &-title{
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+
+            @include atLarge{
+                margin-top: 30rem;
+            }
+        
+            @include atSmall{
+                margin-top: 9rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: 100%; 
+            }
+
+            &-image{
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 40vh;
+                }
+
+            }
+        }
+        &-badge{
+            font-family: 'Raleway', sans-serif;
+            transition: .3s;
+            overflow: hidden;
+            font-weight: 300 !important;
+            &:focus{
+                outline: 0;
+            }
+            &:hover{
+                background: #f0932b;
+                cursor: pointer;
+            
+            }
+        }
+    }
+}
+
+.line-break{
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to left, #f0f0f0, #8c8b8b, #f0f0f0);
+    margin-top: 6rem;
+}
