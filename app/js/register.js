@@ -111,11 +111,16 @@ document.getElementById('registrationform').addEventListener('submit', submitted
     $('.btn-hide-contact100').on('click', function () {       
         $(".container-contact100").fadeOut(300);
         count = 1;
-        idName = "";
+      idName = "";
+      document.getElementById('member2').style.display = "none";      
+      document.getElementById('member3').style.display = "none";      
+      document.getElementById('member4').style.display = "none";      
+      document.getElementById('member5').style.display = "none";      
     });
 
     $('.btn-show-contact100').on('click', function () {
-        if (isSignedUp) {
+      if (isSignedUp) {
+            count = 1;
             $(".container-contact100").css("top", "0.1%");
             $('.container-contact100').fadeIn(300);
             $(".container-contact100").css("visibility", "visible");
@@ -261,6 +266,50 @@ $("#robosoccer").on("click", function() {
       }
       // console.log(count);
     });
+});
+
+$("#roborumble").on("click", function () {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text('Register For RoboRumble');
+
+  $('#addmember').on('click', function () {
+    if (count <= events.roborumble) {
+      count++;
+      idName = "member" + count;
+      document.getElementById(idName).style.display = "block";
+    }
+    if (count >= 1 && count <= event.roborumble) {
+      document.getElementById("addmember").disabled = false;
+      document.getElementById("delmember").disabled = false;
+    }
+    if (count === events.roborumble) {
+      document.getElementById('addmember').disabled = true;
+      document.getElementById('delmember').disabled = false;
+    }
+    // console.log(count);
+
+
+  })
+  $('#delmember').on('click', function () {
+    if (count >= 1) {
+      idName = "member" + count;
+      document.getElementById(idName).style.display = "none";
+      count--;
+    }
+    if (count >= 1 && count <= event.roborumble) {
+      document.getElementById("addmember").disabled = false;
+      document.getElementById("delmember").disabled = false;
+    }
+    if (count === 1) {
+      document.getElementById("addmember").disabled = false;
+      document.getElementById("delmember").disabled = true;
+    }
+    // console.log(count);
+
+  })
 });
 
 //coding:
