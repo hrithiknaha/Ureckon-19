@@ -28,6 +28,10 @@
   - #2301D
     * Added oval avatars and Hover effect.
 
+  - #2401A
+    * Teams page minor changes
+    * Home page particle and parallax
+    
 ### Technologies used:
   - Gulp
   - Sass
