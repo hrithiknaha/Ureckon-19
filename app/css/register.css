@@ -122,6 +122,13 @@ label {
   margin: 0;
 }
 
+
+/*  { */
+  .contact100-form {
+
+  height: 400px;
+  overflow: auto
+}
 /*---------------------------------------------*/
 button {
 	outline: none !important;
@@ -309,7 +316,7 @@ iframe {
 /*------------------------------------------------------------------
 [ Input ]*/
 
-.wrap-input100 {
+.wrap-input100, #the-basics {
   width: 100%;
   position: relative;
   border: 1px solid #e6e6e6;
@@ -360,7 +367,6 @@ textarea.input100 {
 }
 
 /*---------------------------------------------*/
-
 .focus-input100 {
   position: absolute;
   display: block;
@@ -483,7 +489,7 @@ textarea.input100 {
 /*------------------------------------------------------------------
 [ Alert validate ]*/
 
-.validate-input {
+.validate-input, #the-basics {
   position: relative;
 }
 
@@ -562,18 +568,17 @@ textarea.input100 {
 }
 .tt-menu {
   margin-left: 5px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-family: Montserrat-Regular, sans-serif;
   border: 3px solid #000;
   border-radius: 5px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  /* padding: 10px; */
-  width: 50%;
+  width: 100%;
   display: block;
   background: #fff;
 }
 .tt-suggestion {
-  /* border: 2px solid #000; */
   padding: 5px;
 
 }
@@ -584,7 +589,6 @@ textarea.input100 {
   border-bottom-right-radius: 5px;
   color: #fff;
 }
-
 /*---------------------------------------------*/
 @media (max-width: 576px) {
   .btn-hide-validate {
