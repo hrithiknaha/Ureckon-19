@@ -24,13 +24,14 @@
     width: 80%;
     margin: auto;
     color: rgb(255, 255, 255);
+    transform-style: preserve-3d;
     
     @include atLarge{
         padding-top: 30vh;
     }
 
     @include atSmall{
-        padding-top: 15vh;
+        padding-top: 20vh;
     }
 
     &__title{
@@ -38,6 +39,7 @@
         letter-spacing: 0.1em;
         font-size: 3.3rem;
         font-weight: 300;
+        transform: translateZ(20px);
 
         @include atLarge{
             font-size: 4.5rem;
@@ -137,68 +139,13 @@
 //teams Page ----------------------------------------------
 .teams-page{
     margin-top: 25%;
-    &__head-teacher{
-        &-title{
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
-
-            @include atLarge{
-                margin-top: 30rem;
-            }
-        
-            @include atSmall{
-                margin-top: 9rem;
-                text-align: center;
-                font-size: 2.5rem !important;
-            }
-
-        }
-        &-cards{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 2rem;
-
-            @include atLarge{
+    @include atLarge{
                 
-            }
-        
-            @include atSmall{
-                grid-template-columns: 100%; 
-            }
-
-            &-image{
-                width: 100%;
-                height: 25vw;
-                object-fit: cover;
-
-                @include atLarge{
-                
-                }
-            
-                @include atSmall{
-                    height: 40vh;
-                }
-
-            }
-        }
-        &-badge{
-            font-family: 'Raleway', sans-serif;
-            transition: .3s;
-            overflow: hidden;
-            font-weight: 300 !important;
-            font-size: 100% !important;
-            &:focus{
-                outline: 0;
-            }
-            &:hover{
-                background: #f6e58d;
-                cursor: pointer;
-            
-            }
-        }
     }
-
-    &__core-member{
+    @include atSmall{
+        margin-top: 75%;
+    }
+    &__head-teacher{
         &-title{
             margin-bottom: 1.5rem;
             font-size: 2.5rem;
@@ -224,7 +171,7 @@
             }
         
             @include atSmall{
-                grid-template-columns: 100%; 
+                grid-template-columns: repeat(3,1fr); 
             }
 
             &-image{
@@ -237,7 +184,104 @@
                 }
             
                 @include atSmall{
-                    height: 40vh;
+                    height: 15vh;
+                }
+            }
+            &-body{
+                text-align: center;
+                &-name{
+                    font-size: 1.5rem; 
+                    padding-top: 1rem;
+                    @include atLarge{
+                
+                    }
+                    @include atSmall{
+                        font-size: 0.9rem;
+                    }
+                }
+                &-title{
+                    font-size: 1.1rem;
+                    @include atLarge{
+                
+                    }
+                    @include atSmall{
+                        font-size: 0.7rem !important;
+                    }
+                }
+            }
+            &-social{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0.215rem;
+                display: none;
+                @include atLarge{
+                
+                }
+                @include atSmall{
+                    font-size: 1rem;
+                }
+                & a{
+                    color: #02AAB0 !important;
+                }
+            }
+        }
+        // &-badge{
+        //     font-family: 'Raleway', sans-serif;
+        //     transition: .3s;
+        //     overflow: hidden;
+        //     font-weight: 300 !important;
+        //     font-size: 100% !important;
+        //     &:focus{
+        //         outline: 0;
+        //     }
+        //     &:hover{
+        //         background: #f6e58d;
+        //         cursor: pointer;
+            
+        //     }
+        // }
+    }
+
+    &__core-member{
+        &-title{
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+
+            @include atLarge{
+                margin-top: 30rem;
+            }
+        
+            @include atSmall{
+                margin-top: 1rem;
+                text-align: center;
+                font-size: 2.5rem !important;
+            }
+
+        }
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 2rem;
+
+            @include atLarge{
+                
+            }
+        
+            @include atSmall{
+                grid-template-columns: repeat(3,1fr); 
+            }
+
+            &-image{
+                width: 100%;
+                height: 14vw;
+                object-fit: cover;
+
+                @include atLarge{
+                
+                }
+            
+                @include atSmall{
+                    height: 15vh;
                 }
 
             }
@@ -245,10 +289,23 @@
                 text-align: center;
                 &-name{
                    font-size: 1.5rem; 
-                   padding-top: 0.5rem;
+                   padding-top: 1rem;
+                   @include atLarge{
+                
+                    }
+                    @include atSmall{
+                        font-size: 0.9rem;
+                    }
                 }
                 &-title{
                     font-size: 1.1rem;
+                    @include atLarge{
+                
+                    }
+                    @include atSmall{
+                        font-size: 0.7rem !important;
+                        margin-top: -0.4rem;
+                    }
                 }
             }
             &-social{
@@ -261,21 +318,21 @@
                 }
             }
         }
-        &-badge{
-            font-family: 'Raleway', sans-serif;
-            transition: .3s;
-            overflow: hidden;
-            font-weight: 300 !important;
-            font-size: 100% !important;
-            &:focus{
-                outline: 0;
-            }
-            &:hover{
-                background: #f6e58d;
-                cursor: pointer;
+        // &-badge{
+        //     font-family: 'Raleway', sans-serif;
+        //     transition: .3s;
+        //     overflow: hidden;
+        //     font-weight: 300 !important;
+        //     font-size: 100% !important;
+        //     &:focus{
+        //         outline: 0;
+        //     }
+        //     &:hover{
+        //         background: #f6e58d;
+        //         cursor: pointer;
             
-            }
-        }  
+        //     }
+        // }  
     }
     &__coordinator{
         &-title{
@@ -287,7 +344,7 @@
             }
         
             @include atSmall{
-                margin-top: 9rem;
+                margin-top: 1rem;
                 text-align: center;
                 font-size: 2.5rem !important;
             }
@@ -303,7 +360,7 @@
             }
         
             @include atSmall{
-                grid-template-columns: 100%; 
+                grid-template-columns: repeat(4,1fr); 
             }
 
             &-image{
@@ -316,26 +373,48 @@
                 }
             
                 @include atSmall{
-                    height: 40vh;
+                    height: 10vh;
                 }
-
+            }
+            &-body{
+                text-align: center;
+                &-name{
+                   font-size: 1.5rem; 
+                   padding-top: 1rem;
+                   @include atLarge{
+                
+                    }
+                    @include atSmall{
+                        font-size: 0.7rem;
+                    }
+                }
+                &-title{
+                    font-size: 1.1rem;
+                    @include atLarge{
+                
+                    }
+                    @include atSmall{
+                        font-size: 0.5rem !important;
+                        margin-top: -0.4rem;
+                    }
+                }
             }
         }
-        &-badge{
-            font-family: 'Raleway', sans-serif;
-            transition: .3s;
-            overflow: hidden;
-            font-weight: 300 !important;
-            font-size: 100% !important;
-            &:focus{
-                outline: 0;
-            }
-            &:hover{
-                background: #f6e58d;
-                cursor: pointer;
+        // &-badge{
+        //     font-family: 'Raleway', sans-serif;
+        //     transition: .3s;
+        //     overflow: hidden;
+        //     font-weight: 300 !important;
+        //     font-size: 100% !important;
+        //     &:focus{
+        //         outline: 0;
+        //     }
+        //     &:hover{
+        //         background: #f6e58d;
+        //         cursor: pointer;
             
-            }
-        }  
+        //     }
+        // }  
     }
 }
 
@@ -354,11 +433,23 @@
 .card__teams{
     border: none !important;
         &:hover {
-        .teams-page__core-member-cards-social{
-            display: block;
-        }  
-        .teams-page__core-member-cards-body-title{
-            display: none;
+        .teams-page{
+            &__core-member-cards{
+                &-social{
+                    display: block;
+                }
+                &-body-title{
+                    display: none;
+                }
+            }
+            &__head-teacher-cards{
+                &-social{
+                    display: block;
+                }
+                &-body-title{
+                    display: none;
+                }
+            } 
         }
-    }
+    } 
 }

@@ -7,7 +7,9 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 $('.js-tilt').tilt({
     glare: true,
     maxGlare: .5,
-    easing: "cubic-bezier(.03,.98,.52,.99)" 
+    easing: "cubic-bezier(.03,.98,.52,.99)" ,
+    transition: true,
+    scale: 1.2,
 })
 
 $(document).ready(function() {
