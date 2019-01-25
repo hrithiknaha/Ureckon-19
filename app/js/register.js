@@ -1,5 +1,3 @@
-var output;
-
 // ****** BACKEND DEVELOPER CONFIGURATION STARTS: *******
 
 var members = ["Sayan", "Somsubhra", "Raja", "Baja", "Khaja"]; // FETCH USERNAMES FROM DATABASE AND ADD TO THIS ARRAY
