@@ -295,6 +295,10 @@ iframe {
   background-color: rgba(67,67,67,0.6);
 }
 
+.contact100-form-title span {
+  text-align: center;
+}
+
 
 /*==================================================================
 [ Form ]*/
