@@ -9,8 +9,8 @@ var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
 // ********* BACKEND DEVELOPER CONFIGURATION ENDS: *********
 
 var events = {
-  // roborace: 5,
-  // robowar: 3,
+  roborace: 5,
+  robowar: 5,
   robosoccer: 5,
   roborumble: 5,
   bridgemaking: 3,
@@ -22,6 +22,15 @@ var events = {
   pubg: 4,
   cluex: 2,
   uic: 5,
+  techquiz: 2,
+  linefollower: 4,
+  aerostorm: 5,
+  nfs: 1,
+  fifa: 1,
+  csgo: 5,
+  urecathon: 4,
+  armofhercules: 4,
+  debugging: 2,
 };
 
 var idName = "";
@@ -151,15 +160,16 @@ $("#roborace").on("click", function () {
     notSignedUp();
     return;
   }
-  $(".contact100-form-title span").text('Register For RoboRace');
+  $(".contact100-form-title span").text('Register For Need For Torque - NFT');
 
   $('#addmember').off().on('click', function () {
     if (count <= events.roborace) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      // $('#' + idName).slideDown();
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.roborace) {
+    if (count >= 1 && count <= events.roborace) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -174,10 +184,11 @@ $("#roborace").on("click", function () {
   $('#delmember').off().on('click', function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      // $("#" + idName).slideUp();
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.roborace) {
+    if (count >= 1 && count <= events.roborace) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -195,15 +206,15 @@ $('#robowar').on('click', function () {
     notSignedUp();
     return;
   }
-  $(".contact100-form-title span").text("Register For RoboWar");
+  $(".contact100-form-title span").text("Register For Robo Dangal");
 
   $('#addmember').off().on('click', function () {
     if (count <= events.robowar) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.robowar) {
+    if (count >= 1 && count <= events.robowar) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -218,10 +229,10 @@ $('#robowar').on('click', function () {
   $('#delmember').off().on('click', function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.robowar) {
+    if (count >= 1 && count <= events.robowar) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -239,14 +250,14 @@ $("#robosoccer").on("click", function () {
     notSignedUp();
     return;
   }
-  $(".contact100-form-title span").text("Register For Robo Soccer");
+  $(".contact100-form-title span").text("Register For Robo League");
   $("#addmember").off().on("click", function () {
     if (count <= events.robosoccer) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.robosoccer) {
+    if (count >= 1 && count <= events.robosoccer) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -259,10 +270,10 @@ $("#robosoccer").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.robosoccer) {
+    if (count >= 1 && count <= events.robosoccer) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -279,15 +290,15 @@ $("#roborumble").on("click", function () {
     notSignedUp();
     return;
   }
-  $(".contact100-form-title span").text("Register For RoboRumble");
+  $(".contact100-form-title span").text("Register For Robo Rumble");
 
   $("#addmember").off().on("click", function () {
     if (count <= events.roborumble) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.roborumble) {
+    if (count >= 1 && count <= events.roborumble) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -300,10 +311,10 @@ $("#roborumble").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.roborumble) {
+    if (count >= 1 && count <= events.roborumble) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -313,6 +324,51 @@ $("#roborumble").on("click", function () {
     }
     // console.log(count);
   });
+});
+
+$("#linefollower").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Dirrecion");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.linefollower) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.linefollower) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.linefollower) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.linefollower) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
 });
 
 //coding:
@@ -327,9 +383,9 @@ $("#coderanch").on("click", function () {
     if (count <= events.coderanch) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.coderanch) {
+    if (count >= 1 && count <= events.coderanch) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -342,10 +398,10 @@ $("#coderanch").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.coderanch) {
+    if (count >= 1 && count <= events.coderanch) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -368,9 +424,9 @@ $("#codegolf").on("click", function () {
     if (count <= events.codegolf) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.codegolf) {
+    if (count >= 1 && count <= events.codegolf) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -383,10 +439,10 @@ $("#codegolf").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.codegolf) {
+    if (count >= 1 && count <= events.codegolf) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -409,9 +465,9 @@ $("#spyder").on("click", function () {
     if (count <= events.spyder) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.spyder) {
+    if (count >= 1 && count <= events.spyder) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -424,10 +480,10 @@ $("#spyder").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.spyder) {
+    if (count >= 1 && count <= events.spyder) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -437,6 +493,51 @@ $("#spyder").on("click", function () {
     }
     // console.log(count);
   });
+});
+
+$("#debugging").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Debugger");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.debugging) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.debugging) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.debugging) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.debugging) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
 });
 
 // Gaming:
@@ -452,9 +553,9 @@ $("#pubg").on("click", function () {
     if (count <= events.pubg) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.pubg) {
+    if (count >= 1 && count <= events.pubg) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -467,10 +568,10 @@ $("#pubg").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.pubg) {
+    if (count >= 1 && count <= events.pubg) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -480,6 +581,71 @@ $("#pubg").on("click", function () {
     }
     // console.log(count);
   });
+});
+
+$("#csgo").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Counter Strike: GO/1.6");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.csgo) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.csgo) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.csgo) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.csgo) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+$("#nfs").on("click", function () {
+  document.getElementById("addmember").style.display = "none";
+  document.getElementById("delmember").style.display = "none";
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For NFS: Most Wanted");
+});
+
+$("#fifa").on("click", function() {
+  document.getElementById("addmember").style.display = "none";
+  document.getElementById("delmember").style.display = "none";
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For FIFA");
 });
 
 // mechanical:
@@ -494,9 +660,9 @@ $("#bridgemaking").on("click", function () {
     if (count <= events.bridgemaking) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.bridgemaking) {
+    if (count >= 1 && count <= events.bridgemaking) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -509,10 +675,10 @@ $("#bridgemaking").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.bridgemaking) {
+    if (count >= 1 && count <= events.bridgemaking) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -524,21 +690,111 @@ $("#bridgemaking").on("click", function () {
   });
 });
 
+$("#armofhercules").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Arm Of Hercules");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.armofhercules) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.armofhercules) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.armofhercules) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.armofhercules) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+$("#aerostorm").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For AeroStorm");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.aerostorm) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.aerostorm) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.aerostorm) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.aerostorm) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
 // Flagship:
 $("#uic").on("click", function () {
   if (!isSignedUp) {
     notSignedUp();
     return;
   }
-  $(".contact100-form-title span").text("Register For UIC");
+  $(".contact100-form-title span").text("Register For Ureckon Innovation Challenge - UIC");
 
   $("#addmember").off().on("click", function () {
     if (count <= events.uic) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.uic) {
+    if (count >= 1 && count <= events.uic) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -551,10 +807,51 @@ $("#uic").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.uic) {
+    if (count >= 1 && count <= events.uic) {
+      document.getElementById("addmember").disabled = false;
+      document.getElementById("delmember").disabled = false;
+    }
+    if (count === 1) {
+      document.getElementById("addmember").disabled = false;
+      document.getElementById("delmember").disabled = true;
+    }
+    // console.log(count);
+  });
+});
+
+$("#urecathon").on("click", function () {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Ureck-A-Thon");
+
+  $("#addmember").off().on("click", function () {
+    if (count <= events.urecathon) {
+      count++;
+      idName = "member" + count;
+      $('#' + idName).slideDown();
+    }
+    if (count >= 1 && count <= events.urecathon) {
+      document.getElementById("addmember").disabled = false;
+      document.getElementById("delmember").disabled = false;
+    }
+    if (count === events.urecathon) {
+      document.getElementById("addmember").disabled = true;
+      document.getElementById("delmember").disabled = false;
+    }
+    // console.log(count);
+  });
+  $("#delmember").off().on("click", function () {
+    if (count >= 1) {
+      idName = "member" + count;
+      $("#" + idName).slideUp();
+      count--;
+    }
+    if (count >= 1 && count <= events.urecathon) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -579,9 +876,9 @@ $("#getsetsell").on("click", function () {
     if (count <= events.getsetsell) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.getsetsell) {
+    if (count >= 1 && count <= events.getsetsell) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -594,10 +891,10 @@ $("#getsetsell").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.getsetsell) {
+    if (count >= 1 && count <= events.getsetsell) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -614,15 +911,15 @@ $("#admaking").on("click", function () {
     notSignedUp();
     return;
   }
-  $(".contact100-form-title span").text("Register For Ad making");
+  $(".contact100-form-title span").text("Register For Ad mad");
 
   $("#addmember").off().on("click", function () {
     if (count <= events.admaking) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.admaking) {
+    if (count >= 1 && count <= events.admaking) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -635,10 +932,10 @@ $("#admaking").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.admaking) {
+    if (count >= 1 && count <= events.admaking) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -662,9 +959,9 @@ $("#cluex").on("click", function () {
     if (count <= events.cluex) {
       count++;
       idName = "member" + count;
-      document.getElementById(idName).style.display = "block";
+      $('#' + idName).slideDown();
     }
-    if (count >= 1 && count <= event.cluex) {
+    if (count >= 1 && count <= events.cluex) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -677,10 +974,10 @@ $("#cluex").on("click", function () {
   $("#delmember").off().on("click", function () {
     if (count >= 1) {
       idName = "member" + count;
-      document.getElementById(idName).style.display = "none";
+      $("#" + idName).slideUp();
       count--;
     }
-    if (count >= 1 && count <= event.cluex) {
+    if (count >= 1 && count <= events.cluex) {
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = false;
     }
@@ -690,6 +987,51 @@ $("#cluex").on("click", function () {
     }
     // console.log(count);
   });
+});
+
+$("#techquiz").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For ThinkTech");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.techquiz) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.techquiz) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.techquiz) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.techquiz) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
 });
 
 
