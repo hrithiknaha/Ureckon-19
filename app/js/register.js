@@ -132,6 +132,8 @@ document.getElementById('registrationform').addEventListener('submit', submitted
       document.getElementById('member3').style.display = "none";
       document.getElementById('member4').style.display = "none";
       document.getElementById('member5').style.display = "none";
+      document.getElementById("addmember").disabled = false;
+      document.getElementById("delmember").disabled = true;
       count = 1;
       idName = "";
       $(".container-contact100").css("top", "0.1%");
