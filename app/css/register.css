@@ -315,9 +315,16 @@ iframe {
   padding: 40px 55px 48px 55px;
 }
 
+.zmdi-close:hover {
+  color: #ff0000;
+}
 
 /*------------------------------------------------------------------
 [ Input ]*/
+
+.wrap-contact100 {
+  top: 200px;
+}
 
 .wrap-input100, #the-basics {
   width: 100%;

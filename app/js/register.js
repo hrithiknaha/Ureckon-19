@@ -116,6 +116,13 @@ document.getElementById('registrationform').addEventListener('submit', submitted
   /*==================================================================
   [ Show / hide contact ]*/
   $('.btn-hide-contact100').on('click', function () {
+    if (!isSignedUp) {
+      $(".container-contact100").fadeOut(300);
+      $("#notSigned").animate({
+        top: "200px",
+      });
+      return;
+    }
     document.getElementById('member2').style.display = "none";
     document.getElementById('member3').style.display = "none";
     document.getElementById('member4').style.display = "none";
@@ -123,6 +130,9 @@ document.getElementById('registrationform').addEventListener('submit', submitted
     count = 1;
     idName = "";
     $(".container-contact100").fadeOut(300);
+    $("#signed").animate({
+      top: "200px",
+    })
 
   });
 
@@ -139,12 +149,16 @@ document.getElementById('registrationform').addEventListener('submit', submitted
       $(".container-contact100").css("top", "0.1%");
       $('.container-contact100').fadeIn(300);
       $(".container-contact100").css("visibility", "visible");
+      $("#signed").animate({
+        top: "0px",
+      });
 
     } else {
       notSignedUp();
       $(".container-contact100").css("top", "0.1%");
       $(".container-contact100").fadeIn(300);
       $(".container-contact100").css('visibility', 'visible');
+      $("#notSigned").animate({ top: "0px" });
     }
 
   });
