@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Ureckon | Events</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="../scss/3-Modules/hover.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
+    <link rel="shortcut icon" href="../images/white/Logo__white.png" type="image/x-icon">
 </head>
 <body>
+
+    <div class="bg-container-contact100">
 	<div  class="background__image-events"></div>
 	<div data-tilt class="hero">
 		<h2 class="hero__title ">Events Information Page!</h2>
-		<p class="hero__subtitle lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores expedita beatae dolorem unde quod neque nobis laborum! Veritatis, autem!</p>
+		<p class="hero__subtitle lead">Discover the astonishing events of Ureckon.</p>
         <a data-scroll href="#events-page">
             <i class="hero__arrow fas fa-angle-down"></i>
         </a>
@@ -67,50 +75,80 @@
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Robo Race<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
+                                <h4 class="card-title">Need For Torque - NFT<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="" class="btn btn-primary float-right hvr-buzz btn-show-contact100">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="roborace">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Robowar<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
+                                <h4 class="card-title">Robo Dangal<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="robowar">
+                                    Register
+                                </button>
                             </div>
                     </div>
-                    <div class="card">
+                    <!-- <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
                             <div class="card-body">
                                 <h4 class="card-title">Robo Sumo<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="robosumo">
+                                    Register
+                                </button>
                             </div>
-                    </div>
+                    </div> -->
 
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Line Follower<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
+                                <h4 class="card-title">Dirrecion<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="linefollower">
+                                    Register
+                                </button>
                             </div>
                     </div>
 
                     <div class="card">
                         <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
                         <div class="card-body">
-                            <h4 class="card-title">Robo Soccer<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
+                            <h4 class="card-title">Robo League<div  class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div></h4>
                             <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                            <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                            <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                            <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="robosoccer">
+                                Register
+                            </button>
                         </div>
                 </div>
+                <div class="card">
+                    <img src="https://source.unsplash.com/random" class="card-img-top events-page__robotics-cards-image" alt="events pictures">
+                    <div class="card-body">
+                        <h4 class="card-title">Robo Rumble<div class="float-right events-page__robotics-badge badge badge-secondary">Robotics</div>
+                        </h4>
+                        <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                        <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
+                        <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                        <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="roborumble">
+                            Register
+                        </button>
+                    </div>
+                </div>
+                
                 </div> 
                 <hr class="line-break">
             </section>
@@ -128,7 +166,10 @@
                                 <h4 class="card-title">Code Ranch<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="coderanch">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
@@ -137,26 +178,35 @@
                                 <h4 class="card-title">Code Golf<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="codegolf">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__coding-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Web Design<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
+                                <h4 class="card-title">Spyder<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="spyder">
+                                    Register
+                                </button>
                             </div>
                     </div>
 
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__coding-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Debugging<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
+                                <h4 class="card-title">Debugger<div  class="float-right events-page__coding-badge badge badge-secondary">Coding</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="debugging">
+                                    Register
+                                </button>
                             </div>
                     </div>
                 </div> 
@@ -173,10 +223,13 @@
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__gaming-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">CS Go<div  class="float-right events-page__gaming-badge badge badge-secondary">Gaming    </div></h4>
+                                <h4 class="card-title">Counter Strike: GO/1.6<div  class="float-right events-page__gaming-badge badge badge-secondary">Gaming    </div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="csgo">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
@@ -185,26 +238,35 @@
                                 <h4 class="card-title">FIFA<div  class="float-right events-page__gaming-badge badge badge-secondary">Gaming</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="fifa">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__gaming-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">NFS<div  class="float-right events-page__gaming-badge badge badge-secondary">Gaming</div></h4>
+                                <h4 class="card-title">NFS: Most Wanted<div  class="float-right events-page__gaming-badge badge badge-secondary">Gaming</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="nfs">
+                                    Register
+                                </button>
                             </div>
                     </div>
 
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__gaming-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">PUBG Mobile<div  class="float-right events-page__gaming-badge badge badge-secondary">Gaming</div></h4>
+                                <h4 class="card-title">PUBG<div  class="float-right events-page__gaming-badge badge badge-secondary">Gaming</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="pubg">
+                                    Register
+                                </button>
                             </div>
                     </div>
                 </div> 
@@ -221,10 +283,13 @@
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__mechanics-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Bridge Making<div  class="float-right events-page__mechanics-badge badge badge-secondary">Mechanics</div></h4>
+                                <h4 class="card-title">Bridge-O-Nics<div  class="float-right events-page__mechanics-badge badge badge-secondary">Mechanics</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="bridgemaking">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
@@ -233,16 +298,22 @@
                                 <h4 class="card-title">Arm of Hercules<div  class="float-right events-page__mechanics-badge badge badge-secondary">Mechanics</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="armofhercules">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__mechanics-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Aerostorm<div  class="float-right events-page__mechanics-badge badge badge-secondary">Mechanics</div></h4>
+                                <h4 class="card-title">AeroStorm<div  class="float-right events-page__mechanics-badge badge badge-secondary">Mechanics</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="aerostorm">
+                                    Register
+                                </button>
                             </div>
                     </div>
                 </div> 
@@ -259,19 +330,25 @@
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__flagship-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">UIC- Urecon Inovation Challenge<div  class="float-right events-page__flagship-badge badge badge-secondary">Flagship</div></h4>
+                                <h4 class="card-title">Ureckon Inovation Challenge - UIC<div  class="float-right events-page__flagship-badge badge badge-secondary">Flagship</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="uic">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__flagship-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Urecathon<div  class="float-right events-page__flagship-badge badge badge-secondary">Flagship</div></h4>
+                                <h4 class="card-title">Ureck-A-Thon<div  class="float-right events-page__flagship-badge badge badge-secondary">Flagship</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="urecathon">
+                                    Register
+                                </button>
                             </div>
                     </div>
                 </div> 
@@ -291,16 +368,22 @@
                                 <h4 class="card-title">Get Set Sell<div  class="float-right events-page__business-badge badge badge-secondary">Business</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="getsetsell">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__business-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Ad making<div  class="float-right events-page__business-badge badge badge-secondary">Business</div></h4>
+                                <h4 class="card-title">Ad Mad<div  class="float-right events-page__business-badge badge badge-secondary">Business</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="admaking">
+                                    Register
+                                </button>
                             </div>
                     </div>
                 </div> 
@@ -320,16 +403,22 @@
                                 <h4 class="card-title">ClueX<div  class="float-right events-page__miscellaneous-badge badge badge-secondary">Miscellaneous</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="cluex">
+                                    Register
+                                </button>
                             </div>
                     </div>
                     <div class="card">
                             <img src="https://source.unsplash.com/random" class="card-img-top events-page__miscellaneous-cards-image" alt="events pictures">
                             <div class="card-body">
-                                <h4 class="card-title">Tech Quiz - Think Tech<div  class="float-right events-page__miscellaneous-badge badge badge-secondary">Miscellaneous</div></h4>
+                                <h4 class="card-title">ThinkTech<div  class="float-right events-page__miscellaneous-badge badge badge-secondary">Miscellaneous</div></h4>
                                 <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 <a href="#" class="btn btn-light hvr-wobble-vertical"><i class="fas fa-arrow-down"></i> Download</a>
-                                <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a>
+                                <!-- <a href="#" class="btn btn-primary float-right hvr-buzz">Register</a> -->
+                                <button class="btn btn-primary float-right hvr-buzz btn-show-contact100" id="techquiz">
+                                    Register
+                                </button>
                             </div>
                     </div>
                 </div> 
@@ -337,14 +426,97 @@
             </section>
         </div>
     </div>
+    </div>
+
+    <div class="container-contact100" id="output">
+            <div class="wrap-contact100" id="signed">
+                <button class="btn-hide-contact100">
+                    <i class="far fa-times-circle"></i>
+                </button>
         
-
-
+                <div class="contact100-form-title" style="background: #eeeeee">
+                    <span>Register</span>
+                </div>
+        
+                <form class="contact100-form validate-form" method="POST" id="registrationform">
+                    <div class="wrap-input100 validate-input">
+                        <input id="name" class="input100" type="text" name="name" placeholder="Team Name" autocomplete="off" required>
+                        <span class="focus-input100"></span>
+                        <label class="label-input100" for="name">
+                            <span class="fa fa-users"></span>
+                        </label>
+                    </div>
+        
+                    <div id="member1" class="members">
+                        <div class="wrap-input100 validate-input" id="the-basics">
+                            <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member 1 Username " required>
+                            <span class="focus-input100"></span>
+                            <label class="label-input100" for="email">
+                                <span class="fa fa-user"></span>
+                            </label>
+                        </div>                
+                    </div>
+                    <div id="member2" class="members" style="display: none">
+                        <div class="wrap-input100 validate-input" id="the-basics">
+                            <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member 2 Username ">
+                            <span class="focus-input100"></span>
+                            <label class="label-input100" for="email">
+                                <span class="fa fa-user"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="member3" class="members" style="display: none">
+                        <div class="wrap-input100 validate-input" id="the-basics">
+                            <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member  3 Username ">
+                            <span class="focus-input100"></span>
+                            <label class="label-input100" for="email">
+                                <span class="fa fa-user"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="member4" class="members" style="display: none">
+                        <div class="wrap-input100 validate-input" id="the-basics">
+                            <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member  4 Username ">
+                            <span class="focus-input100"></span>
+                            <label class="label-input100" for="email">
+                                <span class="fa fa-user"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="member5" class="members" style="display: none">
+                        <div class="wrap-input100 validate-input" id="the-basics">
+                            <input id="email" class="input100 typeahead" type="text" name="username" placeholder="Enter Member 5 Username ">
+                            <span class="focus-input100"></span>
+                            <label class="label-input100" for="email">
+                                <span class="fa fa-user"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <button id="addmember" class="btn btn-success btn-sm" type="button">+</button>
+                    <button id="delmember" class="btn btn-danger btn-sm" type="button">-</button>
+        
+                    <div class="container-contact100-form-btn">
+                        <input type="submit" class="contact100-form-btn" value="Submit">
+                    </div>
+                </form>
+            </div>
     
+            <div class="wrap-contact100" id="notSigned">
+                <button class="btn-hide-contact100 mt-2" >
+                    <i class="far fa-times-circle"></i>
+                </button>
+                <div class="contact100-form-title" style="background: #eeeeee">
+                    <span style="text-align:center;">It seems like you are not signed up. Sign Up here:</span>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <a href="./signup.html"><button class="contact100-form-btn">
+                            Sign Up
+                        </button></a>
+                </div>
+            </div>
+        </div>
     
-
-
-    
+           
     
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -354,6 +526,21 @@
     <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
     <script src="../js/Modules/smooth-scroll.js"></script>
     <script src="../js/events.js"></script> 
+    
+    <script src="../js/register.js"></script>
+    <script src="../vendor/select2/select2.min.js"></script>
+    <script src="../vendor/daterangepicker/moment.min.js"></script>
+    <script src="../vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="../vendor/countdowntime/countdowntime.js"></script>
+    <script src="../vendor/typeahead/typeahead.bundle.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
     
 </body>
 </html>

@@ -31,6 +31,10 @@
   - #2401A
     * Teams page minor changes
     * Home page particle and parallax
+
+  - #2801A
+    * Registration Form
+    * Sort Vendor folder
     
 ### Technologies used:
   - Gulp
