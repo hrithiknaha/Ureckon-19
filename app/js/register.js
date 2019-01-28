@@ -4,6 +4,8 @@ var members = ["Sayan", "Somsubhra", "Raja", "Baja", "Khaja"]; // FETCH USERNAME
 
 var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
 
+var loggedInUser = "username"; // FETCH LOGGED IN USERNAME FROM DATABASE
+
 // ********* BACKEND DEVELOPER CONFIGURATION ENDS: *********
 
 var events = {
@@ -138,6 +140,8 @@ document.getElementById('registrationform').addEventListener('submit', submitted
 
   $('.btn-show-contact100').on('click', function () {
     if (isSignedUp) {
+      $('#member1 #email').val(loggedInUser);
+      $('#member1').css('opacity', 0.5);
       document.getElementById('member2').style.display = "none";
       document.getElementById('member3').style.display = "none";
       document.getElementById('member4').style.display = "none";
