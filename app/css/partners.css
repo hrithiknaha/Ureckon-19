@@ -1,0 +1,61 @@
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url("../fonts/montserrat/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/montserrat/Montserrat-Regular.ttf");
+}
+
+body {
+  background: #ffafbd; 
+  background: -webkit-linear-gradient(
+    to right,
+    #ffc3a0,
+    #ffafbd
+  ); 
+  background: linear-gradient(
+    to right,
+    #ffc3a0,
+    #ffafbd
+  );
+  /* background: #fff; */
+  /* background: #20002c;
+  background: -webkit-linear-gradient(
+    to right,
+    #cbb4d4,
+    #20002c
+  );
+  background: linear-gradient(
+    to right,
+    #cbb4d4,
+    #20002c
+  ); */
+  /* color: #fff; */
+  font-family: Montserrat-Regular, sans-serif;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+#header {
+  font-family: Montserrat-Bold, sans-serif;
+}
+.partner_logo {
+  filter: grayscale(100%);
+  /* filter: brightness(0) invert(1); */
+}
+hr {
+  background-color: #fff;
+}
+.label {
+  /* text-align: center; */
+  justify-content: center;
+}
