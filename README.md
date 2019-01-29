@@ -35,6 +35,10 @@
   - #2801A
     * Registration Form
     * Sort Vendor folder
+
+  - #2901A
+    * Home page Animation
+    * About us Page
     
 ### Technologies used:
   - Gulp

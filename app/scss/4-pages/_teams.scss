@@ -225,21 +225,6 @@
                 }
             }
         }
-        // &-badge{
-        //     font-family: 'Raleway', sans-serif;
-        //     transition: .3s;
-        //     overflow: hidden;
-        //     font-weight: 300 !important;
-        //     font-size: 100% !important;
-        //     &:focus{
-        //         outline: 0;
-        //     }
-        //     &:hover{
-        //         background: #f6e58d;
-        //         cursor: pointer;
-            
-        //     }
-        // }
     }
 
     &__core-member{
@@ -310,29 +295,21 @@
             }
             &-social{
                 text-align: center;
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 padding: 0.215rem;
                 display: none;
+                @include atLarge{
+                
+                }
+                @include atSmall{
+                    font-size: 0.7rem !important;
+                    margin-top: -0.4rem;
+                }
                 & a{
                     color: #02AAB0 !important;
                 }
             }
         }
-        // &-badge{
-        //     font-family: 'Raleway', sans-serif;
-        //     transition: .3s;
-        //     overflow: hidden;
-        //     font-weight: 300 !important;
-        //     font-size: 100% !important;
-        //     &:focus{
-        //         outline: 0;
-        //     }
-        //     &:hover{
-        //         background: #f6e58d;
-        //         cursor: pointer;
-            
-        //     }
-        // }  
     }
     &__coordinator{
         &-title{
@@ -385,7 +362,7 @@
                 
                     }
                     @include atSmall{
-                        font-size: 0.7rem;
+                        font-size: 0.5rem;
                     }
                 }
                 &-title{
@@ -394,9 +371,27 @@
                 
                     }
                     @include atSmall{
-                        font-size: 0.5rem !important;
+                        font-size: 0.4rem !important;
                         margin-top: -0.4rem;
                     }
+                }
+            }
+            &-social{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0.215rem;
+                display: none;
+
+                @include atLarge{
+                
+                }
+                @include atSmall{
+                    font-size: 0.7rem !important;
+                    margin-top: -0.4rem;
+                }
+                & a{
+                    color: #02AAB0 !important;
+                    font-size: 0.8rem;
                 }
             }
         }
@@ -443,6 +438,14 @@
                 }
             }
             &__head-teacher-cards{
+                &-social{
+                    display: block;
+                }
+                &-body-title{
+                    display: none;
+                }
+            } 
+            &__coordinator-cards{
                 &-social{
                     display: block;
                 }
