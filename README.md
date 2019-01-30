@@ -40,6 +40,9 @@
     * Home page Animation
     * About us Page
     
+  - #3001A
+    * Web Team page
+    
 ### Technologies used:
   - Gulp
   - Sass
