@@ -34,6 +34,10 @@ body, html {
 	font-family: Montserrat-Regular, sans-serif;
 }
 
+.hero__events {
+  grid-template-columns: repeat(8, 1fr)!important;
+}
+
 /*---------------------------------------------*/
 a {
 	font-family: Montserrat-Regular;
@@ -297,6 +301,7 @@ iframe {
 
 .contact100-form-title span {
   text-align: center;
+	font-family: Montserrat-SemiBold, sans-serif;
 }
 
 
