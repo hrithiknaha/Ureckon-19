@@ -4,6 +4,8 @@ var members = ["Sayan", "Somsubhra", "Raja", "Baja", "Khaja"]; // FETCH USERNAME
 
 var isSignedUp = true; // GET USER SIGNED UP STATUS FROM DATABASE
 
+var loggedInUser = "username"; // FETCH LOGGED IN USERNAME FROM DATABASE
+
 // ********* BACKEND DEVELOPER CONFIGURATION ENDS: *********
 
 var events = {
@@ -29,6 +31,9 @@ var events = {
   urecathon: 4,
   armofhercules: 4,
   debugging: 2,
+  solvero: 4,
+  biotex: 4,
+  healthybites: 4,
 };
 
 var idName = "";
@@ -138,10 +143,14 @@ document.getElementById('registrationform').addEventListener('submit', submitted
 
   $('.btn-show-contact100').on('click', function () {
     if (isSignedUp) {
+      $('#member1 #email').val(loggedInUser);
+      $('#member1').css('opacity', 0.5);
       document.getElementById('member2').style.display = "none";
       document.getElementById('member3').style.display = "none";
       document.getElementById('member4').style.display = "none";
       document.getElementById('member5').style.display = "none";
+      document.getElementById("addmember").style.display = "block";
+      document.getElementById("delmember").style.display = "block";
       document.getElementById("addmember").disabled = false;
       document.getElementById("delmember").disabled = true;
       count = 1;
@@ -960,6 +969,144 @@ $("#admaking").on("click", function () {
     // console.log(count);
   });
 });
+
+// initiatives:
+
+$("#solvero").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Solvero");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.solvero) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.solvero) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.solvero) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.solvero) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+$("#biotex").on("click", function () {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For BioteXpression");
+
+  $("#addmember")
+    .off()
+    .on("click", function () {
+      if (count <= events.biotex) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.biotex) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.biotex) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function () {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.biotex) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
+$("#healthybites").on("click", function () {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For Healthy Bites");
+
+  $("#addmember")
+    .off()
+    .on("click", function () {
+      if (count <= events.solvero) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.healthybites) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.healthybites) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function () {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.healthybites) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
 
 // misc:
 $("#cluex").on("click", function () {

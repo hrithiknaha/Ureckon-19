@@ -43,6 +43,10 @@
   - #3001A
     * Web Team page
     
+  - #3101A
+    * Events added
+    * Coordinator Added
+    
 ### Technologies used:
   - Gulp
   - Sass
