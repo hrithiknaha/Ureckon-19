@@ -87,6 +87,9 @@ body {
   }
 }
 @media only screen and (max-width: 500px) {
+  .footer {
+    padding: 20px;
+  }
     .footer .col {
       width: 50%;
     }
