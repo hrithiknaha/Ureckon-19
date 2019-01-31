@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var x = screen.height;
-  if (x <= 600) { // mobile
+  if (x <= 800) { // mobile
     $(".footer").hide();
   }
 });
