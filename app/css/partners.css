@@ -13,6 +13,13 @@
   src: url("../fonts/montserrat/Montserrat-Regular.ttf");
 }
 
+@import url("https://fonts.googleapis.com/css?family=Assistant:300,400,700|Open+Sans:300,400,700|Roboto:300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Staatliches");
+
+html {
+  font-family: sans-serif;
+}
 body {
   background: #ffafbd; 
   background: -webkit-linear-gradient(
@@ -38,7 +45,7 @@ body {
     #20002c
   ); */
   /* color: #fff; */
-  font-family: Montserrat-Regular, sans-serif;
+  /* font-family: Montserrat-Regular, sans-serif; */
   text-align: center;
 }
 
@@ -46,7 +53,8 @@ body {
   text-align: center;
 }
 #header {
-  font-family: Montserrat-Bold, sans-serif;
+  /* font-family: Montserrat-Bold, sans-serif; */
+  font-size: 4rem;
 }
 .partner_logo {
   filter: grayscale(100%);

@@ -606,6 +606,52 @@ $("#pubg").on("click", function () {
   });
 });
 
+// pubg emulator
+$("#pubgem").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For PUBG");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.pubg) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.pubg) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.pubg) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.pubg) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
+});
+
 $("#csgo").on("click", function() {
   if (!isSignedUp) {
     notSignedUp();
