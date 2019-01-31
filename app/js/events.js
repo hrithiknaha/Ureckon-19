@@ -23,6 +23,8 @@ $(".fa-robot").click(function(){
     $(".events-page__flagship").hide();
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
+    $("#events-page__initiatives").hide();
+
 });
 
 $(".fa-code").click(function(){
@@ -34,6 +36,8 @@ $(".fa-code").click(function(){
     $(".events-page__flagship").hide();
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
+    $("#events-page__initiatives").hide();
+
 });
 
 $(".fa-gamepad").click(function(){
@@ -45,6 +49,8 @@ $(".fa-gamepad").click(function(){
     $(".events-page__flagship").hide();
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
+    $("#events-page__initiatives").hide();
+
 });
 
 $(".fa-drafting-compass").click(function(){
@@ -56,6 +62,8 @@ $(".fa-drafting-compass").click(function(){
     $(".events-page__flagship").hide();
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
+    $("#events-page__initiatives").hide();
+
 });
 
 $(".fa-free-code-camp").click(function(){
@@ -67,6 +75,8 @@ $(".fa-free-code-camp").click(function(){
     $(".events-page__flagship").show();
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
+    $("#events-page__initiatives").hide();
+
 });
 
 $(".fa-briefcase").click(function(){
@@ -89,6 +99,8 @@ $(".fa-microchip").click(function(){
     $(".events-page__flagship").hide();
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").show();
+    $("#events-page__initiatives").hide();
+
 });
 
 $(".fa-bolt").click(function () {
