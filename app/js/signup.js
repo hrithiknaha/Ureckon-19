@@ -1,3 +1,9 @@
+$(document).ready(function() {
+  var x = screen.height;
+  if (x <= 600) { // mobile
+    $(".footer").hide();
+  }
+});
 $('.name').on("change keyup paste",
   function(){
     if($(this).val()){
