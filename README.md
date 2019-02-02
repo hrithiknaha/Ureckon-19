@@ -46,6 +46,10 @@
   - #3101A
     * Events added
     * Coordinator Added
+
+  - #0302A
+    * Partners
+    * Footer
     
 ### Technologies used:
   - Gulp

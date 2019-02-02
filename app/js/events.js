@@ -12,6 +12,7 @@ $('.js-tilt').tilt({
 
 $(document).ready(function() {
     $(".events-page").hide();
+    $(".footer").hide();
 });
 
 $(".fa-robot").click(function(){
@@ -24,6 +25,7 @@ $(".fa-robot").click(function(){
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
     $("#events-page__initiatives").hide();
+    $(".footer__events").show();
 });
 
 $(".fa-code").click(function(){
@@ -36,6 +38,7 @@ $(".fa-code").click(function(){
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
     $("#events-page__initiatives").hide();
+    $(".footer__events").show();
 });
 
 $(".fa-gamepad").click(function(){
@@ -48,6 +51,7 @@ $(".fa-gamepad").click(function(){
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
     $("#events-page__initiatives").hide();
+    $(".footer__events").show();
 });
 
 $(".fa-drafting-compass").click(function(){
@@ -60,6 +64,7 @@ $(".fa-drafting-compass").click(function(){
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
     $("#events-page__initiatives").hide();
+    $(".footer__events").show();
 });
 
 $(".fa-free-code-camp").click(function(){
@@ -72,6 +77,7 @@ $(".fa-free-code-camp").click(function(){
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
     $("#events-page__initiatives").hide();
+    $(".footer__events").show();
 });
 
 $(".fa-briefcase").click(function(){
@@ -84,6 +90,7 @@ $(".fa-briefcase").click(function(){
     $(".events-page__business").show();
     $(".events-page__miscellaneous").hide();
     $("#events-page__initiatives").hide();
+    $(".footer__events").show();
 });
 
 $(".fa-microchip").click(function(){
@@ -96,6 +103,7 @@ $(".fa-microchip").click(function(){
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").show();
     $("#events-page__initiatives").hide();
+    $(".footer__events").show();
 });
 
 $(".fa-bolt").click(function () {
@@ -108,6 +116,7 @@ $(".fa-bolt").click(function () {
     $(".events-page__business").hide();
     $(".events-page__miscellaneous").hide();
     $("#events-page__initiatives").show();
+    $(".footer__events").show();
 });
 
 

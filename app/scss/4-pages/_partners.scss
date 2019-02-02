@@ -1,13 +1,14 @@
-.aboutus{
+.partners{
     &__backdrop{
         position: relative;
         top: 0;
         left: 0;
         width: 100%;
         height: 25%;
-        background: #0f0c29;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #e65c00;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         
         color: white;
         &-title{
@@ -31,3 +32,16 @@
         }
     }
 }
+
+
+ .partner_logo {
+    filter: grayscale(100%);
+    /* filter: brightness(0) invert(1); */
+  }
+  hr {
+    background-color: #fff;
+  }
+  .label {
+    /* text-align: center; */
+    justify-content: center;
+  }
