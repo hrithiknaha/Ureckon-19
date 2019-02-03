@@ -293,4 +293,3 @@ particlesJS('particles-js',{
   window.PolluxFx = PolluxFx;
 
 })(window);
-  
