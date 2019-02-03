@@ -332,5 +332,57 @@
             text-decoration: none;
         }
     }
+    &__home{
+        background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #161718, #0c0d0e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        color: white;
+        &-links{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        &-text{
+            text-align: center;
+        padding: 3rem;
+        }
+
+        &-socials{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            text-align:center;
+            width: 30%;
+            padding: 0 3rem 3rem 3rem;
+            margin: auto;
+            
+            @include atSmall{
+                width: 100%;
+            }
+        }
+
+        &-copyright{
+            text-align: center;
+            background: linear-gradient(to right, #18191a, #0b0c0c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        padding: 2rem;
+        }
+
+        &-line{
+            color: white;
+        }
+
+        a{
+            color: white;
+        text-decoration: none;
+        }
+        a:hover{
+            color: grey;
+            text-decoration: none;
+        }
+    }
 }
 
