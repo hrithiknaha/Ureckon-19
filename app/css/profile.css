@@ -1,0 +1,44 @@
+.custom-select-sm {
+  width: 70%;
+  margin-top: 10px;
+}
+.custom-select-sm option {
+  color: #000;
+}
+.container {
+  margin-top: 50px;
+}
+.img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin-top: 20%;
+}
+.col-md-4 {
+  text-align: center;
+}
+.custom-file {
+  text-align: left;
+  margin-top: 30px;
+}
+#eventSelector {
+  margin-left: 10px;
+}
+#member1-list, 
+#member2-list, 
+#member3-list, 
+#member4-list, 
+#member5-list {
+  display: none;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 770px) {
+  #name {
+    margin: 30px;
+    text-align: center;
+  }
+  .img {
+    margin-top: 10%;
+  }
+}
