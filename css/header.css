@@ -1,0 +1,53 @@
+.main_wrapper{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    transition: top .5s, left .5s, width .5s, height .5s, transfrom .5s .5s;
+    overflow: collapse;
+}
+
+.main_wrapper .wrapper{
+    width: 100%;
+    height: auto;
+    background: #d4d4d4;
+    position: relative;
+
+}
+
+
+header{
+    width: 100%;
+    height: 15vh;
+    background: #074f6b;
+}   
+
+.brand_logo{
+    height: 100%;
+    width: 40%;
+}
+
+.nav_trigger{
+    float:right;
+    margin: 25px 25px 0px 0px;
+    font-size: 2.2rem;
+    color: #fff;    
+}
+
+.nav_trigger:hover, .user_btn:hover{
+    cursor:pointer;
+}
+
+.user_btn{
+    float: right;
+    font-size: 2.2rem;
+    margin: 25px 30px 0px 0px;
+    color: #fff;
+}
+
+@media screen and (max-width: 800px){
+    .nav_trigger, .user_btn{
+        font-size: 1rem;
+    }
+}
