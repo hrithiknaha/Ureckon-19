@@ -68,6 +68,10 @@
       color: #fff;
       font-family: 'Staatliches', cursive;
     }
+    @include atSmall{
+      top:50%;
+      left:20%;
+    }
   }
 
 

@@ -22,6 +22,10 @@
             width: 30%;
             padding: 0 3rem 3rem 3rem;
             margin: auto;
+            @include atSmall{
+                width: 100%;
+                padding: none;
+            }
         }
 
         &-copyright{
@@ -345,6 +349,15 @@
                 color: grey;
                 text-decoration: none;
             }
+            @include atSmall{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                text-align: center;
+                padding: 0.5rem;
+                background-color: rgba(128, 128, 128, 0.452);
+                font-size: 0.9rem;
+                width: 100%;
+            }
         }
         &-right{
             float: right;
@@ -358,6 +371,15 @@
                  color: grey;
                  text-decoration: none;
              }
+             @include atSmall{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                text-align: center;
+                padding: 0.5rem;
+                width: 100%;
+                background-color: rgba(128, 128, 128, 0.452);
+                font-size: 0.9rem;
+            }
         }
     }   
 }
