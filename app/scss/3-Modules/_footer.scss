@@ -337,6 +337,9 @@
         }
     }
     &__home{
+        background-color: hsla(172, 45%, 5%, 0.9) !important;
+        width: 100%;
+        color: black;
         &-left{
             float: left;
             padding: 2rem 3rem;
