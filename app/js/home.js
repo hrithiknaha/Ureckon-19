@@ -180,38 +180,66 @@
   })(window);
 
 
-let root       = document.documentElement;
-let body       = document.getElementsByTagName('body')[0];
-let elementsCC = document.querySelectorAll('.cube');
-let lightMode  = document.getElementById("toggle-mode");
-let pauseMode  = document.getElementById("toggle-modePP");
-
- 
-elementsCC.forEach(element => {
-  let bbox = element.getBBox(),
-    x = bbox.x,
-    y = bbox.y,
-    w = bbox.width,
-    h = bbox.height;
-                 
-  //center center
-  let resultCC = (x + (w / 2)) + 'px ' + (y + (h / 2)) + 'px';
+  let root       = document.documentElement;
+  let body       = document.getElementsByTagName('body')[0];
+  let elementsCC = document.querySelectorAll('.cube');
+  let lightMode  = document.getElementById("toggle-mode");
+  let pauseMode  = document.getElementById("toggle-modePP");
   
-  element.style.setProperty("transform-origin", resultCC)
-}); // forEach
-
-function map(value, minA, maxA, minB, maxB) {
-    return (1 - ((value - minA) / (maxA - minA))) * minB + ((value - minA) / (maxA - minA)) * maxB;
-}
-
-// Parallax
-  var scene = document.getElementById('scene');
-  var parallaxInstance = new Parallax(scene);
-
-
-
-
-
+   
+  elementsCC.forEach(element => {
+    let bbox = element.getBBox(),
+      x = bbox.x,
+      y = bbox.y,
+      w = bbox.width,
+      h = bbox.height;
+                   
+    //center center
+    let resultCC = (x + (w / 2)) + 'px ' + (y + (h / 2)) + 'px';
+    
+    element.style.setProperty("transform-origin", resultCC)
+  }); // forEach
+  
+  function map(value, minA, maxA, minB, maxB) {
+      return (1 - ((value - minA) / (maxA - minA))) * minB + ((value - minA) / (maxA - minA)) * maxB;
+  }
+  
+  onmousemove = function(e) {
+    xpos = e.clientX;
+    ypos = e.clientY;
+    maw = window.innerWidth;
+    
+    Hsl = map(e.clientX, 0, maw, 140, 290);
+    root.style.setProperty('--Hsl', Hsl);
+  }
+  
+  lightMode.addEventListener("click", function(){
+    if (body.classList.contains("darkMode")) {
+      body.classList.remove("darkMode");
+    } else {
+      body.classList.add("darkMode");
+    }
+  }); 
+  
+  pauseMode.addEventListener("click", function(){
+    if (body.classList.contains("togglePaused")) {
+      body.classList.remove("togglePaused");
+    } else {
+      body.classList.add("togglePaused");
+    }
+  }); 
+  
+  body.addEventListener("keypress", function(e){
+    var keyCode = e.keyCode;
+    if(keyCode == 32){
+      if (body.classList.contains("togglePaused")) {
+        body.classList.remove("togglePaused");
+      } else {
+        body.classList.add("togglePaused");
+      }
+    }
+  });
+  
 
 
 
