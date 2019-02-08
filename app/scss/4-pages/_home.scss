@@ -2,27 +2,12 @@
   width: 50%;
   text-align: center;
   margin: auto;
-  @include atSmall{
-    width: 100%;
-  }
+  padding-top: 1rem;
   &__UEM{
-    padding-right: 2rem;
-    @include atSmall{
-      padding-top: 2rem;
-    }
+    padding-right: 3rem;
   }
   &__ureckon{
-    padding-right: 2rem;
-    left: 5.5rem !important;
-    @include atSmall{
-      padding-top: 2rem;
-    }
-  }
-  &__IEM{
-    left: 11rem !important;
-    @include atSmall{
-      padding-top: 2rem;
-    }
+    padding-right: 3rem;
   }
 }
 
