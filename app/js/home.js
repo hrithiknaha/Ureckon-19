@@ -92,7 +92,7 @@
             targets: this.DOM.img,
             duration: 1000,
             easing: 'easeInOutCubic',
-            scale: 0.7
+            scale: 1
         });
   
         anime({

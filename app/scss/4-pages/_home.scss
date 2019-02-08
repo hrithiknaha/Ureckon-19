@@ -24,19 +24,31 @@
   }
   &__UEM{
     text-align: center;
-    width:85%;
+    width:65%;
     height: auto;
+    margin: auto;
   }
   &__ureckon{
     text-align: center;
+    width: 100%;
   }
   &__IEM{
     text-align: center;
-    width:85%;
+    width:65%;
     height: auto;
+    margin: auto;
   }
 }
 
+.home__links{
+  font-size: 3rem;
+  float: right;
+  padding-right: 3rem;
+  text-align: right;
+  .fas{
+    color: rgb(65, 10, 136) !important;
+  }
+}
 
   /* Content */
   .content {
