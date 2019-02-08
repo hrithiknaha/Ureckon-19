@@ -337,54 +337,52 @@
         }
     }
     &__home{
-        background-color: hsla(172, 45%, 5%, 0.9) !important;
-        width: 100%;
-        color: black;
-        &-left{
-            float: left;
-            padding: 2rem 3rem;
-            a{
-               padding-right: 1rem; 
-               color: white;
-               font-weight: 500;
-            }
-            a:hover{
-                color: grey;
-                text-decoration: none;
-            }
-            @include atSmall{
-                display: grid;
-                grid-template-columns: repeat(3,1fr);
-                text-align: center;
-                padding: 0.5rem;
-                background-color: rgba(128, 128, 128, 0.452);
-                font-size: 0.9rem;
-                width: 100%;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-weight: 600;
+        a{
+            color: white !important;
+            &:hover{
+                text-decoration: none !important;
+                color: gray !important;
             }
         }
-        &-right{
-            float: right;
-            padding: 2rem 3rem;
-            a{
-                padding-right: 1rem; 
-                color: white;
-                font-weight: 500;
-             }
-             a:hover{
-                 color: grey;
-                 text-decoration: none;
-             }
-             @include atSmall{
-                display: grid;
-                grid-template-columns: repeat(3,1fr);
-                text-align: center;
-                padding: 0.5rem;
-                width: 100%;
-                background-color: rgba(128, 128, 128, 0.452);
-                font-size: 0.9rem;
-            }
+        &-aboutus{
+            grid-area: one;
         }
-    }   
+        &-partners{
+            grid-area: two; 
+        }
+        &-team{
+            grid-area: three;
+        }
+        &-dev{
+            grid-area: four;
+        }
+        &-UOSC{
+            grid-area: five;
+        }
+        &-others{
+            grid-area: six;
+        }
+
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 5fr 1fr 1fr 1fr;
+        grid-template-areas: "one two three . four five six";
+
+        @include atSmall{
+            width: 100%;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-areas: "one two three four five six";
+            font-size: 0.6rem;
+            text-align: none;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
 }
 
 

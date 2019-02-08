@@ -8,13 +8,13 @@
   transition: stroke 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 .tesseract .up {
-  fill: #ef9f9f;
+  fill: #8494ff;
 }
 .tesseract .left {
-  fill: #793535;
+  fill: #b686ff;
 }
 .tesseract .right {
-  fill: #b75c5c;
+  fill: #84fff7;
 }
 .tesseract polygon {
   stroke-width: 2;

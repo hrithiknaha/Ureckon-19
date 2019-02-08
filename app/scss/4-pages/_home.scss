@@ -1,7 +1,33 @@
-
+.logo{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  @include atSmall{
+    width: 100%;
+  }
+  &__UEM{
+    padding-right: 2rem;
+    @include atSmall{
+      padding-top: 2rem;
+    }
+  }
+  &__ureckon{
+    padding-right: 2rem;
+    left: 5.5rem !important;
+    @include atSmall{
+      padding-top: 2rem;
+    }
+  }
+  &__IEM{
+    left: 11rem !important;
+    @include atSmall{
+      padding-top: 2rem;
+    }
+  }
+}
 
 .body{
-  background-color:hsla(172, 45%, 5%, 0.9);
+  background-color:hsla(209, 84%, 66%, 0.9);
 }
   /* Content */
   .content {

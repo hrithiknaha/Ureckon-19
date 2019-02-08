@@ -1,6 +1,3 @@
-// Parallax
-//   var scene = document.getElementById('scene');
-//   var parallaxInstance = new Parallax(scene);
 
 //Stack
 (function (window) {
@@ -207,6 +204,9 @@ function map(value, minA, maxA, minB, maxB) {
     return (1 - ((value - minA) / (maxA - minA))) * minB + ((value - minA) / (maxA - minA)) * maxB;
 }
 
+// Parallax
+  var scene = document.getElementById('scene');
+  var parallaxInstance = new Parallax(scene);
 
 
 
