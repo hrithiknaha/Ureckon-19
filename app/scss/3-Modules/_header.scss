@@ -293,11 +293,11 @@
     &__links{
         a:hover{
             color: grey !important;
-            text-decoration: none !important;
+			text-decoration: none !important;
         }
         a{
             color: inherit !important;
-        }
+		}
     }
 }
     
@@ -402,9 +402,11 @@ nav {
 			opacity: 1;
 			
 			&:hover {
-				background: shade($color, 90%);
+				background: shade($color, 90%) !important;
 				color: $color;
 				transition-delay: 0s;
+				background-color: rgba(0, 0, 0, 0.719);
+				color: white !important;
 			}
 	
 			&:active {
