@@ -10,9 +10,10 @@
   
   .body {
     position: relative;
-    margin:  0;
-    padding: 90px 0 30px 0;
+    margin:  auto;
+    padding: 0px 0 30px 0;
     min-height: calc(100vh - 120px);
+    
     
     &:after,
     &:before {
@@ -42,12 +43,16 @@
   }
   
   .tesseract {
-    width: 100%;
+    width: 60vw;
     padding-top: 3rem;
     max-height: calc(100vh - 120px);
     filter: drop-shadow( 3px 3px 4px rgba(0, 0, 0, .4));
     stroke: #2D4671;
     transition: stroke .3s $transition;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     
     .up {
       fill: hsl((var(--Hsl)), 72%, 78%);

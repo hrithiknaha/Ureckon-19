@@ -1,7 +1,7 @@
 toggle = document.querySelectorAll(".toggle")[0];
 nav = document.querySelectorAll("nav")[0];
-toggle_open_text = 'Menu';
-toggle_close_text = 'Close';
+toggle_open_text = '<i class="fas fa-bars"></i>';
+toggle_close_text = '<i class="fas fa-times"></i>';
 
 toggle.addEventListener('click', function() {
 	nav.classList.toggle('open');

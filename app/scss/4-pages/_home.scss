@@ -1,13 +1,35 @@
 .logo{
-  width: 50%;
-  text-align: center;
+  width: 80%;
   margin: auto;
   padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include atSmall{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    &__UEM{
+      width: 100%;
+    height: auto;
+    }
+    &__ureckon{
+      width: 100%;
+    height: auto;
+      
+    }
+    &__IEM{
+      width: 100%;
+    height: auto;
+      
+    }
+  }
   &__UEM{
-    padding-right: 3rem;
+    text-align: center;
   }
   &__ureckon{
-    padding-right: 3rem;
+    text-align: center;;
+  }
+  &__IEM{
+    text-align: center;
   }
 }
 
@@ -150,7 +172,7 @@
     width: 100%;
     margin: 1em 0;
     text-align: left;
-    color: #fff;
+    color: rgb(24, 23, 23);
   }
   
   .column {
