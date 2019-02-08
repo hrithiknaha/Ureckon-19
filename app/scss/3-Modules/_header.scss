@@ -15,13 +15,14 @@
 	color: white !important;
 }
 
+
 $size : 50px;
 $size-mob :25px;
 $items : 5;
 $transition : .5s;
 $bounce : cubic-bezier(.3,1.4,.5,.9);
-$color-inner : #24243e;
-$color-outer : #0f0c29;
+$color-inner : #6c5ce7;
+$color-outer : #3d27e4;
 $background: mix($color-inner, $color-outer);
 $black : shade($color-outer, 80%);
 $start-scale : .5;

@@ -1240,7 +1240,6 @@ $('#the-basics .typeahead').typeahead({
 );
 
 function submitted(event) {
-  event.preventDefault();
   console.log('submitted');
 
 }
