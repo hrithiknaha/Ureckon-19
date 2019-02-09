@@ -304,69 +304,26 @@ window.addEventListener( 'resize', function(){
   
   })(window);
 
+//Hero Glitch
+setInterval(function(){ 
+    $('.glitch').toggleClass('glitch--v1');  
+    setTimeout(function(){
+      $('.glitch').toggleClass('glitch--v2');  
+    },100);
+ },5000);
 
-//   let root       = document.documentElement;
-//   let body       = document.getElementsByTagName('body')[0];
-//   let elementsCC = document.querySelectorAll('.cube');
-//   let lightMode  = document.getElementById("toggle-mode");
-//   let pauseMode  = document.getElementById("toggle-modePP");
-  
-   
-//   elementsCC.forEach(element => {
-//     let bbox = element.getBBox(),
-//       x = bbox.x,
-//       y = bbox.y,
-//       w = bbox.width,
-//       h = bbox.height;
-                   
-//     //center center
-//     let resultCC = (x + (w / 2)) + 'px ' + (y + (h / 2)) + 'px';
-    
-//     element.style.setProperty("transform-origin", resultCC)
-//   }); // forEach
-  
-//   function map(value, minA, maxA, minB, maxB) {
-//       return (1 - ((value - minA) / (maxA - minA))) * minB + ((value - minA) / (maxA - minA)) * maxB;
-//   }
-  
-//   onmousemove = function(e) {
-//     xpos = e.clientX;
-//     ypos = e.clientY;
-//     maw = window.innerWidth;
-    
-//     Hsl = map(e.clientX, 0, maw, 140, 290);
-//     root.style.setProperty('--Hsl', Hsl);
-//   }
-  
-//   lightMode.addEventListener("click", function(){
-//     if (body.classList.contains("darkMode")) {
-//       body.classList.remove("darkMode");
-//     } else {
-//       body.classList.add("darkMode");
-//     }
-//   }); 
-  
-//   pauseMode.addEventListener("click", function(){
-//     if (body.classList.contains("togglePaused")) {
-//       body.classList.remove("togglePaused");
-//     } else {
-//       body.classList.add("togglePaused");
-//     }
-//   }); 
-  
-//   body.addEventListener("keypress", function(e){
-//     var keyCode = e.keyCode;
-//     if(keyCode == 32){
-//       if (body.classList.contains("togglePaused")) {
-//         body.classList.remove("togglePaused");
-//       } else {
-//         body.classList.add("togglePaused");
-//       }
-//     }
-//   });
-  
+ //Smooth Scroll
+ var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 1000,
+    speedAsDuration: true,
+    easing: 'easeInOutCubic'
+});
 
+$(document).ready(function() {
+    $('.home__hide').hide();
+});
 
-
-
+$('.home__hero-subtext-arrow').click(function(){
+    $('.home__hide').show();
+});
 
