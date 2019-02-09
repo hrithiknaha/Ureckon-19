@@ -12,18 +12,24 @@
         left: 0;
         &-title{
             text-align: center;
-            padding: 4rem 4rem 0rem 4rem;;
+			padding: 4rem 4rem 0rem 4rem;
+			@include atSmall{
+				padding: 2rem;
+			}
         }
         &-subtitle{
             text-align: center;
             padding-bottom: 5rem;
-            font-size: 2rem;
+			font-size: 2rem;
+			@include atSmall{
+				padding-bottom: 0;
+			}
         }
     }
     &__content{
         width: 70% !important;
         margin: auto;
-        padding-top: 3rem;
+		padding-top: 3rem;
         >p{ 
             margin: 0 !important;
             padding: 0;

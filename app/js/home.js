@@ -1,132 +1,3 @@
-var c=document.getElementById("c");
-var w = c.width = window.innerWidth,
-    h = c.height = window.innerHeight,
-    ctx = c.getContext( '2d' ),
-    
-    opts = {
-      
-      len: 20,
-      count: 50,
-      baseTime: 10,
-      addedTime: 10,
-      dieChance: .05,
-      spawnChance: 1,
-      sparkChance: .1,
-      sparkDist: 10,
-      sparkSize: 2,
-      
-      color: 'hsl(hue,100%,light%)',
-      baseLight: 50,
-      addedLight: 10, // [50-10,50+10]
-      shadowToTimePropMult: 6,
-      baseLightInputMultiplier: .01,
-      addedLightInputMultiplier: .02,
-      
-      cx: w / 2,
-      cy: h / 2,
-      repaintAlpha: .04,
-      hueChange: .1
-    },
-    
-    tick = 0,
-    lines = [],
-    dieX = w / 2 / opts.len,
-    dieY = h / 2 / opts.len,
-    
-    baseRad = Math.PI * 2 / 6;
-    
-ctx.fillStyle = 'black';
-ctx.fillRect( 0, 0, w, h );
-
-function loop() {
-  
-  window.requestAnimationFrame( loop );
-  
-  ++tick;
-  
-  ctx.globalCompositeOperation = 'source-over';
-  ctx.shadowBlur = 0;
-  ctx.fillStyle = 'rgba(0,0,0,alp)'.replace( 'alp', opts.repaintAlpha );
-  ctx.fillRect( 0, 0, w, h );
-  ctx.globalCompositeOperation = 'lighter';
-  
-  if( lines.length < opts.count && Math.random() < opts.spawnChance )
-    lines.push( new Line );
-  
-  lines.map( function( line ){ line.step(); } );
-}
-function Line(){
-  
-  this.reset();
-}
-Line.prototype.reset = function(){
-  
-  this.x = 0;
-  this.y = 0;
-  this.addedX = 0;
-  this.addedY = 0;
-  
-  this.rad = 0;
-  
-  this.lightInputMultiplier = opts.baseLightInputMultiplier + opts.addedLightInputMultiplier * Math.random();
-  
-  this.color = opts.color.replace( 'hue', tick * opts.hueChange );
-  this.cumulativeTime = 0;
-  
-  this.beginPhase();
-}
-Line.prototype.beginPhase = function(){
-  
-  this.x += this.addedX;
-  this.y += this.addedY;
-  
-  this.time = 0;
-  this.targetTime = ( opts.baseTime + opts.addedTime * Math.random() ) |0;
-  
-  this.rad += baseRad * ( Math.random() < .5 ? 1 : -1 );
-  this.addedX = Math.cos( this.rad );
-  this.addedY = Math.sin( this.rad );
-  
-  if( Math.random() < opts.dieChance || this.x > dieX || this.x < -dieX || this.y > dieY || this.y < -dieY )
-    this.reset();
-}
-Line.prototype.step = function(){
-  
-  ++this.time;
-  ++this.cumulativeTime;
-  
-  if( this.time >= this.targetTime )
-    this.beginPhase();
-  
-  var prop = this.time / this.targetTime,
-      wave = Math.sin( prop * Math.PI / 2  ),
-      x = this.addedX * wave,
-      y = this.addedY * wave;
-  
-  ctx.shadowBlur = prop * opts.shadowToTimePropMult;
-  ctx.fillStyle = ctx.shadowColor = this.color.replace( 'light', opts.baseLight + opts.addedLight * Math.sin( this.cumulativeTime * this.lightInputMultiplier ) );
-  ctx.fillRect( opts.cx + ( this.x + x ) * opts.len, opts.cy + ( this.y + y ) * opts.len, 2, 2 );
-  
-  if( Math.random() < opts.sparkChance )
-    ctx.fillRect( opts.cx + ( this.x + x ) * opts.len + Math.random() * opts.sparkDist * ( Math.random() < .5 ? 1 : -1 ) - opts.sparkSize / 2, opts.cy + ( this.y + y ) * opts.len + Math.random() * opts.sparkDist * ( Math.random() < .5 ? 1 : -1 ) - opts.sparkSize / 2, opts.sparkSize, opts.sparkSize )
-}
-loop();
-
-window.addEventListener( 'resize', function(){
-  
-  w = c.width = window.innerWidth;
-  h = c.height = window.innerHeight;
-  ctx.fillStyle = 'black';
-  ctx.fillRect( 0, 0, w, h );
-  
-  opts.cx = w / 2;
-  opts.cy = h / 2;
-  
-  dieX = w / 2 / opts.len;
-  dieY = h / 2 / opts.len;
-});
-
-
 //Stack
 (function (window) {
 
@@ -327,3 +198,144 @@ $('.home__hero-subtext-arrow').click(function(){
     $('.home__hide').show();
 });
 
+let max_particles    = 2500;
+let particles        = [];
+let frequency        = 10;
+let init_num         = max_particles;
+let max_time         = frequency*max_particles;
+let time_to_recreate = false;
+
+// Enable repopolate
+setTimeout(function(){
+  time_to_recreate = true;
+}.bind(this), max_time)
+
+// Popolate particles
+popolate(max_particles);
+
+var tela = document.createElement('canvas');
+    tela.width = $(window).width();
+    tela.height = $(window).height();
+    $("body").append(tela);
+
+var canvas = tela.getContext('2d');
+
+class Particle{
+  constructor(canvas){
+    let random = Math.random()
+    this.progress = 0;
+    this.canvas = canvas;
+    this.center = {
+      x: $(window).width()/2,
+      y: $(window).height()/2
+    }
+    this.point_of_attraction = {
+      x: $(window).width()/2,
+      y: $(window).height()/2
+    }
+
+
+
+    if( Math.random() > 0.5){
+      this.x = $(window).width()*Math.random()
+      this.y = Math.random() > 0.5 ? -Math.random() - 100 : $(window).height() + Math.random() + 100
+    }else{
+      this.x = Math.random() > 0.5 ? -Math.random() - 100 : $(window).width() + Math.random() + 100
+      this.y = $(window).height()*Math.random()
+
+    }
+
+    this.s = Math.random() * 2;
+    this.a = 0
+    this.w = $(window).width()
+    this.h = $(window).height()
+    this.radius = random > .2 ? Math.random()*1 : Math.random()*3
+    this.color  = random > .2 ? "#694FB9" : "#9B0127"
+    this.radius = random > .8 ? Math.random()*2.2 : this.radius
+    this.color  = random > .8 ? "#3CFBFF" : this.color
+  }
+
+  calculateDistance(v1, v2){
+    let x = Math.abs(v1.x - v2.x);
+    let y = Math.abs(v1.y - v2.y);
+    return Math.sqrt((x * x) + (y * y));
+  }
+
+  render(){
+    this.canvas.beginPath();
+    this.canvas.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+    this.canvas.lineWidth = 2;
+    this.canvas.fillStyle = this.color;
+    this.canvas.fill();
+    this.canvas.closePath();
+  }
+
+  move(){
+
+    let p1 = {
+      x: this.x,
+      y: this.y
+    }
+
+    let distance = this.calculateDistance(p1, this.point_of_attraction)
+    let force = Math.max(100, (1 + distance));
+
+    let attr_x = (this.point_of_attraction.x - this.x)/force;
+    let attr_y = (this.point_of_attraction.y - this.y)/force;
+
+    this.x += (Math.cos(this.a) * (this.s)) + attr_x;
+    this.y += (Math.sin(this.a) * (this.s)) + attr_y;
+    this.a += (Math.random() > 0.5 ? Math.random() * 0.9 - 0.45 : Math.random() * 0.4 - 0.2);
+
+    if( distance < (30 + Math.random()*100) ){
+      return false;
+    }
+
+    this.render();
+    this.progress++;
+    return true;
+  }
+}
+
+function popolate(num){
+  for (var i = 0; i < num; i++) {
+    setTimeout(
+      function(x){
+        return function(){
+          // Add particle
+          particles.push(new Particle(canvas))
+        };
+      }(i)
+      ,frequency*i);
+  }
+  return particles.length
+}
+
+function createSphera(){
+  let radius = 180
+  let center = {
+    x: $(window).width()/2,
+    y: $(window).height()/2
+  }
+}
+
+function clear(){
+  canvas.globalAlpha=0.08;
+  canvas.fillStyle='#110031';
+  canvas.fillRect(0, 0, tela.width, tela.height);
+  canvas.globalAlpha=1;
+}
+
+/*
+ * Function to update particles in canvas
+ */
+function update(){
+  particles = particles.filter(function(p) { return p.move() })
+  // Recreate particles
+  if(time_to_recreate){
+    if(particles.length < init_num){ popolate(1); }
+  }
+  clear();
+  requestAnimationFrame(update.bind(this))
+}
+update()
