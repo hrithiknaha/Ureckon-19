@@ -396,9 +396,9 @@ textarea.input100 {
 }
 
 .btn-hide-validate {
-  font-family: "Font Awesome 5 Free";
-  font-size: 18px;
-  color: #fa4251;
+  // font-family: "Font Awesome 5 Free";
+  // font-size: 18px;
+  // color: #fa4251;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -411,6 +411,14 @@ textarea.input100 {
   height: 100%;
   top: 0px;
   right: -25px;
+
+  &::after{
+    content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  color: #fa4251;
+  font-weight: 900;
+  }
 }
 
 .rs1-alert-validate.alert-validate::before {
