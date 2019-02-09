@@ -103,7 +103,7 @@ document.getElementById('registrationform').addEventListener('submit', submitted
 
     $(thisAlert).addClass('alert-validate');
 
-    $(thisAlert).append('<span class="btn-hide-validate">&#xf136;</span>')
+    $(thisAlert).append('<span class="btn-hide-validate"><i class="fas fa-times"></i></span>')
     $('.btn-hide-validate').each(function () {
       $(this).on('click', function () {
         hideValidate(this);
@@ -604,6 +604,51 @@ $("#pubg").on("click", function () {
     }
     // console.log(count);
   });
+});
+
+$("#pubgem").on("click", function() {
+  if (!isSignedUp) {
+    notSignedUp();
+    return;
+  }
+  $(".contact100-form-title span").text("Register For PUBG");
+
+  $("#addmember")
+    .off()
+    .on("click", function() {
+      if (count <= events.pubg) {
+        count++;
+        idName = "member" + count;
+        $("#" + idName).slideDown();
+      }
+      if (count >= 1 && count <= events.pubg) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === events.pubg) {
+        document.getElementById("addmember").disabled = true;
+        document.getElementById("delmember").disabled = false;
+      }
+      // console.log(count);
+    });
+  $("#delmember")
+    .off()
+    .on("click", function() {
+      if (count >= 1) {
+        idName = "member" + count;
+        $("#" + idName).slideUp();
+        count--;
+      }
+      if (count >= 1 && count <= events.pubg) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = false;
+      }
+      if (count === 1) {
+        document.getElementById("addmember").disabled = false;
+        document.getElementById("delmember").disabled = true;
+      }
+      // console.log(count);
+    });
 });
 
 $("#csgo").on("click", function() {
