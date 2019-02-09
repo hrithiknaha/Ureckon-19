@@ -198,3 +198,21 @@ $input-height: 75px;
     background-color: #92A2CD;
 }
 
+.go__back{
+  margin-top: 7rem;
+  > a{
+  color: white !important;
+  }
+  &-right{
+    float:right;
+  }
+  &-signup{
+    margin-top: 10rem;
+    > a{
+      color: white !important;
+      }
+      &-right{
+        float:right;
+      }
+  }
+}

@@ -82,6 +82,9 @@ canvas{
           -webkit-animation: sdb05 1.5s infinite;
           animation: sdb05 1.5s infinite;
           box-sizing: border-box;
+          @include atSmall{
+            left: 46%;
+          }
         }
       }
     }
@@ -463,6 +466,9 @@ body{
   text-align: center;
   width: 100%;
   margin-top:8rem;
+  @include atSmall{
+    margin-top: 20vh;
+  }
   h1{
     position: relative;
     color: #EEEEEE;
@@ -500,4 +506,90 @@ body{
     }
   }  
 }
+
+//Notification Drawer
+
+
+html {box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+.home-drawer-push {
+	overflow-x: hidden;
+	position: relative;
+	right: 0;
+}
+
+.home-drawer {
+	background: #444;
+  	height: 100%;
+  	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 300px;
+	padding: 20px;
+}
+
+.home-drawer-right { right: -300px; }
+
+.home-drawer-right.home-drawer-open { right: 0;    z-index: 999; }
+
+.home-drawer-pushtoleft { right: 300px; }
+
+.home-drawer, .home-drawer-push {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.home-btn {
+	cursor: pointer;
+  font-size: 30px;
+  float: right;
+  color: white;
+  margin-right: 2rem;
+  @include atSmall{
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+  }
+}
+
+.close-btn {
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 58px;
+    top: 25px;
+}
+.notification__header{
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.notification__text{
+  color: white;
+  text-align: left;
+  background: #656767;
+  padding: 2rem;
+  margin-top: 1rem;
+}
   
+.home__login{
+  cursor: pointer;
+  font-size: 30px;
+  float: right;
+  color: white;
+  margin-right: 2rem;
+  @include atSmall{
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+  }
+}

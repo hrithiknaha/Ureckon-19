@@ -339,3 +339,18 @@ function update(){
   requestAnimationFrame(update.bind(this))
 }
 update()
+
+
+//Notification Drawer
+$(document).ready(function() {
+  $drawerRight = $('.home-drawer-right');
+  $home_list = $('.home-btn, .close-btn');
+  
+  $home_list.click(function() {
+    $(this).toggleClass('active');
+    $('.home-drawer-push').toggleClass('home-drawer-pushtoleft');
+    $drawerRight.toggleClass('home-drawer-open');
+  });
+});
+
+
