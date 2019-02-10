@@ -1,0 +1,1 @@
+var scroll=new SmoothScroll('a[href*="#"]',{speed:1e3,speedAsDuration:!0,easing:"easeInOutCubic"});$(".js-tilt").tilt({glare:!0,maxGlare:.5,easing:"cubic-bezier(.03,.98,.52,.99)",transition:!0,scale:1.2}),$(document).ready(function(){$(".teams-page").hide()}),$(".fa-angle-down").click(function(){$(".teams-page").show()});

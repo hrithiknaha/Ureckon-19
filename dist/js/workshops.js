@@ -1,0 +1,1 @@
+var scroll=new SmoothScroll('a[href*="#"]',{speed:1e3,speedAsDuration:!0,easing:"easeInOutCubic"});$(".js-tilt").tilt({glare:!0,maxGlare:.5,easing:"cubic-bezier(.03,.98,.52,.99)"}),$(document).ready(function(){$(".workshops-page").hide()}),$(".fa-angle-down").click(function(){$(".workshops-page").show()});

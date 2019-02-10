@@ -11,6 +11,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var pump = require('pump');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -60,9 +61,25 @@ gulp.task('useref', function() {
 
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('app/js/**/*.js', uglify()))
+    .pipe(gulpIf('app/css/*.css', cssnano()))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('cssnano', function() {
+  return gulp.src('app/css/*.css')
+      .pipe(cssnano())
+      .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('jsnano', function(cb) {
+  pump([
+       gulp.src('app/js/**/*.js'),
+       uglify(),
+       gulp.dest('dist/js')
+  ],
+  cb 
+);  
 });
 
 // Optimizing Images 
