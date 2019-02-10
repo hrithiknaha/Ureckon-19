@@ -268,7 +268,7 @@ canvas{
     font-size: 1.15em;
     width: 100%;
     margin: 1em 0;
-    text-align: left;
+    text-align: center;
     color: rgb(255, 255, 255);
     font-weight: 400;
   }
@@ -584,12 +584,15 @@ html {box-sizing: border-box;}
 .home__login{
   cursor: pointer;
   font-size: 30px;
-  float: right;
   color: white;
-  margin-right: 2rem;
+  margin-left: 2rem;
   @include atSmall{
     margin-top: 2rem;
     font-size: 0.8rem;
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
+}
+
+.home__logo-link{
+  display: flex;
 }
